@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>单元测试 | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.54364397.js" as="script"><link rel="preload" href="/assets/js/2.ea1d54eb.js" as="script"><link rel="preload" href="/assets/js/69.a714dcd7.js" as="script"><link rel="prefetch" href="/assets/js/10.a13ce92a.js"><link rel="prefetch" href="/assets/js/11.c5493f60.js"><link rel="prefetch" href="/assets/js/12.0341abb4.js"><link rel="prefetch" href="/assets/js/13.ecaa558e.js"><link rel="prefetch" href="/assets/js/14.d55c9a2b.js"><link rel="prefetch" href="/assets/js/15.b24cd0ee.js"><link rel="prefetch" href="/assets/js/16.7c38e7c7.js"><link rel="prefetch" href="/assets/js/17.fd15e051.js"><link rel="prefetch" href="/assets/js/18.a3beb2d7.js"><link rel="prefetch" href="/assets/js/19.4f970c5e.js"><link rel="prefetch" href="/assets/js/20.35661968.js"><link rel="prefetch" href="/assets/js/21.ec64587c.js"><link rel="prefetch" href="/assets/js/22.6e07b501.js"><link rel="prefetch" href="/assets/js/23.ba36c783.js"><link rel="prefetch" href="/assets/js/24.b6707acb.js"><link rel="prefetch" href="/assets/js/25.2dbfa4d5.js"><link rel="prefetch" href="/assets/js/26.03e28b6f.js"><link rel="prefetch" href="/assets/js/27.fd4a5887.js"><link rel="prefetch" href="/assets/js/28.364e737b.js"><link rel="prefetch" href="/assets/js/29.29942848.js"><link rel="prefetch" href="/assets/js/3.c931e90d.js"><link rel="prefetch" href="/assets/js/30.9185c6d1.js"><link rel="prefetch" href="/assets/js/31.a35eac1d.js"><link rel="prefetch" href="/assets/js/32.8096a1e0.js"><link rel="prefetch" href="/assets/js/33.407a449d.js"><link rel="prefetch" href="/assets/js/34.e2f81dbb.js"><link rel="prefetch" href="/assets/js/35.028c502e.js"><link rel="prefetch" href="/assets/js/36.2de3185a.js"><link rel="prefetch" href="/assets/js/37.7608c3f2.js"><link rel="prefetch" href="/assets/js/38.20651de8.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.9cbc8b55.js"><link rel="prefetch" href="/assets/js/40.4be51e8d.js"><link rel="prefetch" href="/assets/js/41.36a2e3f0.js"><link rel="prefetch" href="/assets/js/42.2cbf9afa.js"><link rel="prefetch" href="/assets/js/43.ce1c8073.js"><link rel="prefetch" href="/assets/js/44.b494f3f7.js"><link rel="prefetch" href="/assets/js/45.34035be8.js"><link rel="prefetch" href="/assets/js/46.ed534a1d.js"><link rel="prefetch" href="/assets/js/47.64e976a5.js"><link rel="prefetch" href="/assets/js/48.e197e0d5.js"><link rel="prefetch" href="/assets/js/49.f76dee05.js"><link rel="prefetch" href="/assets/js/5.1508cebe.js"><link rel="prefetch" href="/assets/js/50.ac9a636f.js"><link rel="prefetch" href="/assets/js/51.d924871e.js"><link rel="prefetch" href="/assets/js/52.388f4e26.js"><link rel="prefetch" href="/assets/js/53.f60541dc.js"><link rel="prefetch" href="/assets/js/54.f37be02d.js"><link rel="prefetch" href="/assets/js/55.06e6ce80.js"><link rel="prefetch" href="/assets/js/56.5f19dd4d.js"><link rel="prefetch" href="/assets/js/57.9398ec97.js"><link rel="prefetch" href="/assets/js/58.503e48ce.js"><link rel="prefetch" href="/assets/js/59.35603c7d.js"><link rel="prefetch" href="/assets/js/6.3c902562.js"><link rel="prefetch" href="/assets/js/60.f34179ae.js"><link rel="prefetch" href="/assets/js/61.c16de7a0.js"><link rel="prefetch" href="/assets/js/62.ac7dd70d.js"><link rel="prefetch" href="/assets/js/63.1f724cb5.js"><link rel="prefetch" href="/assets/js/64.85777ea3.js"><link rel="prefetch" href="/assets/js/65.270d5490.js"><link rel="prefetch" href="/assets/js/66.1c5e2582.js"><link rel="prefetch" href="/assets/js/67.87624fec.js"><link rel="prefetch" href="/assets/js/68.aca2d12f.js"><link rel="prefetch" href="/assets/js/7.49f43c50.js"><link rel="prefetch" href="/assets/js/8.687ec09d.js"><link rel="prefetch" href="/assets/js/9.0a3f6f96.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>测试</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/" aria-current="page" class="active sidebar-link">单元测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test/#单元测试" class="sidebar-link">单元测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test/#为什么做单元测试" class="sidebar-link">为什么做单元测试</a></li></ul></li><li class="sidebar-sub-header"><a href="/test/#mocha" class="sidebar-link">mocha</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test/#测试脚本的编写" class="sidebar-link">测试脚本的编写</a></li><li class="sidebar-sub-header"><a href="/test/#断言库的用法" class="sidebar-link">断言库的用法</a></li><li class="sidebar-sub-header"><a href="/test/#异步测试" class="sidebar-link">异步测试</a></li><li class="sidebar-sub-header"><a href="/test/#测试用例的钩子" class="sidebar-link">测试用例的钩子</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="单元测试"><a href="#单元测试" class="header-anchor">#</a> 单元测试</h2> <p>顾名思义单元测试就是测试最小单元，我们的单元可能是一个函数，一个button的样式，一个文案等等都可能是一个单元。那么我们在做需求的时候没有必要将所有的单元都做测试，那可能测试代码要比需求代码多得多呢。我们在做需求之前需要提前想好我们的测试用例，并针对测试用例编写测试代码，然后写需求代码。</p> <h3 id="为什么做单元测试"><a href="#为什么做单元测试" class="header-anchor">#</a> 为什么做单元测试</h3> <p>做前端的很多人可能不会去写单元测试，认为这是一个浪费时间的事情，我们有这么多的需求，哪还有时间跟精力去编写测试代码？这么想当然没有错，但是当一个项目由多人一起维护的时候，假如A写了一个页面，B去维护A的页面加了一些逻辑，C去维护该页面再添加一些逻辑，当A再去维护这个页面的时候，可能就会发现已经不是当初他认识的代码了，函数也不是原来的语义，大部分的变量不知道干什么用的。那么A需要捋清楚B、C的逻辑，在B、C的基础上小心翼翼的编写新的需求，生怕哪一步写错，导致线上的代码出错。长此以往下去代码越来越难以维护，越来越少的人能看懂页面内的逻辑，糊墙试代码将页面堵得水泄不通！当然这是最坏的想法，我们不防往好的一方面来想，假如我们每个人的编码水平都很高，都按着规范去写代码，A写完代码，B去维护的时候将A的代码全部了解之后健壮了新的代码，C去维护的时候再把A、B的代码全部掌握后再去写代码，一个月，三个月。。。</p> <p>所以依赖我们自觉去维护代码首先对我们个人能力有很大要求，其次对我们精力也是恨到的浪费。我们要时刻注意是否自己的代码影响到别人的代码。从长远考虑，单元测试是一个大型项目的必然选择。</p> <p>我们讲的单元测试，只是测试代码的最小单元，一个函数就是一个单元，在这里我要提倡大家去学习一下函数式编程。</p> <h2 id="mocha"><a href="#mocha" class="header-anchor">#</a> mocha</h2> <p>使用 NPM 全局安装 ：</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install <span class="token operator">--</span>global mocha
+</code></pre></div><p>也可以作为项目的依赖进行安装</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev mocha
+</code></pre></div><blockquote><p>安装mocha&gt; = v3.0.0，<code>npm</code>的版本应该&gt; = v2.14.2。除此，确保使用Node.js的版本&gt; = v4来运行mocha</p></blockquote> <h3 id="测试脚本的编写"><a href="#测试脚本的编写" class="header-anchor">#</a> 测试脚本的编写</h3> <p><code>Mocha</code>的作用是运行测试脚本，首先必须学会写测试脚本。所谓&quot;测试脚本&quot;，就是用来测试源码的脚本。</p> <p>下面是一个 加法模块 <code>add.js</code>的代码</p> <div class="language- extra-class"><pre class="language-text"><code>// add.js
+function add(x,y){
+	return x+y
+}
+
+module.exports = add
+</code></pre></div><p>要测试这个加法模块是否正确，就要写测试脚本。</p> <p>通常，测试脚本与所要测试的源码脚本同名，但是后缀名为<code>.test.js</code>（表示测试）或者<code>.spec.js</code>（表示规格）。比如，<code>add.js</code>的测试脚本名字就是<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo01/add.test.js" target="_blank" rel="noopener noreferrer"><code>add.test.js</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <div class="language- extra-class"><pre class="language-text"><code>// add.test.js
+
+var add = require('./add.js')
+var expect = require('chai').expect
+
+describe('测试 add 函数'，function(){
+	it('1+1应该等于2',function(){
+		expect(add(1,1)).to.be(2)
+	})
+})
+</code></pre></div><p>上面这段代码，就是测试脚本，它可以独立执行。测试脚本里面应该包括一个或多个<code>describe</code>块，每个<code>describe</code>块应该包括一个或多个<code>it</code>块。</p> <p><code>describe</code>块称为&quot;测试套件&quot;（test suite），表示一组相关的测试。它是一个函数，第一个参数是测试套件的名称（&quot;加法函数的测试&quot;），第二个参数是一个实际执行的函数。</p> <p><code>it</code>块称为&quot;测试用例&quot;（test case），表示一个单独的测试，是测试的最小单位。它也是一个函数，第一个参数是测试用例的名称（&quot;1 加 1 应该等于 2&quot;），第二个参数是一个实际执行的函数。</p> <h3 id="断言库的用法"><a href="#断言库的用法" class="header-anchor">#</a> 断言库的用法</h3> <p>上面的测试脚本里面 ，有一句断言</p> <div class="language- extra-class"><pre class="language-text"><code>expect（add(1,1)）.to.be.equal(2)
+</code></pre></div><p>所谓&quot;断言&quot;，就是判断源码的实际执行结果与预期结果是否一致，如果不一致就抛出一个错误。上面这句断言的意思是，调用<code>add(1, 1)</code>，结果应该等于2。</p> <p>所有的测试用例（it块）都应该含有一句或多句的断言。它是编写测试用例的关键。断言功能由断言库来实现，Mocha本身不带断言库，所以必须先引入断言库。</p> <div class="language- extra-class"><pre class="language-text"><code>var expect = require('chai').expect;
+</code></pre></div><p>断言库有很多种，Mocha并不限制使用哪一种。上面代码引入的断言库是<a href="http://chaijs.com/" target="_blank" rel="noopener noreferrer"><code>chai</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，并且指定使用它的<a href="http://chaijs.com/api/bdd/" target="_blank" rel="noopener noreferrer"><code>expect</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>断言风格。</p> <p><code>expect</code>断言的优点是很接近自然语言，下面是一些例子。</p> <div class="language- extra-class"><pre class="language-text"><code>// 相等或不相等
+expect(4 + 5).to.be.equal(9);
+expect(4 + 5).to.be.not.equal(10);
+expect(foo).to.be.deep.equal({ bar: 'baz' });
+
+// 布尔值为true
+expect('everthing').to.be.ok;
+expect(false).to.not.be.ok;
+
+// typeof
+expect('test').to.be.a('string');
+expect({ foo: 'bar' }).to.be.an('object');
+expect(foo).to.be.an.instanceof(Foo);
+
+// include
+expect([1,2,3]).to.include(2);
+expect('foobar').to.contain('foo');
+expect({ foo: 'bar', hello: 'universe' }).to.include.keys('foo');
+
+// empty
+expect([]).to.be.empty;
+expect('').to.be.empty;
+expect({}).to.be.empty;
+
+// match
+expect('foobar').to.match(/^foo/);
+</code></pre></div><p>基本上，<code>expect</code>断言的写法都是一样的。头部是<code>expect</code>方法，尾部是断言方法，比如<code>equal</code>、<code>a</code>/<code>an</code>、<code>ok</code>、<code>match</code>等。两者之间使用<code>to</code>或<code>to.be</code>连接。</p> <p>如果<code>expect</code>断言不成立，就会抛出一个错误。事实上，只要不抛出错误，测试用例就算通过。</p> <div class="language- extra-class"><pre class="language-text"><code>it('1 加 1 应该等于 2', function() {});
+</code></pre></div><p>上面的这个测试用例，内部没有任何代码，由于没有抛出了错误，所以还是会通过。</p> <h3 id="异步测试"><a href="#异步测试" class="header-anchor">#</a> 异步测试</h3> <p>Mocha默认每个测试用例最多执行2000毫秒，如果到时没有得到结果，就报错。对于涉及异步操作的测试用例，这个时间往往是不够的，需要用<code>-t</code>或<code>--timeout</code>参数指定超时门槛。</p> <div class="language- extra-class"><pre class="language-text"><code>it('测试应该5000毫秒后结束', function(done) {
+  var x = true;
+  var f = function() {
+    x = false;
+    expect(x).to.be.not.ok;
+    done(); // 通知Mocha测试结束
+  };
+  setTimeout(f, 4000);
+});
+</code></pre></div><p>上面的测试用例，需要4000毫秒之后，才有运行结果。所以，需要用<code>-t</code>或<code>--timeout</code>参数，改变默认的超时设置。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ mocha <span class="token operator">-</span>t <span class="token number">5000</span> timeout<span class="token punctuation">.</span>test<span class="token punctuation">.</span>js
+</code></pre></div><p>上面命令将测试的超时时限指定为5000毫秒。</p> <p>另外，上面的测试用例里面，有一个<code>done</code>函数。<code>it</code>块执行的时候，传入一个<code>done</code>参数，当测试结束的时候，必须显式调用这个函数，告诉Mocha测试结束了。否则，Mocha就无法知道，测试是否结束，会一直等到超时报错。你可以把这行删除试试看。</p> <p>Mocha默认会高亮显示超过75毫秒的测试用例，可以用<code>-s</code>或<code>--slow</code>调整这个参数。</p> <p>上面命令指定高亮显示耗时超过1000毫秒的测试用例。</p> <p>下面是另外一个异步测试的例子<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo05/async.test.js" target="_blank" rel="noopener noreferrer"><code>async.test.js</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <div class="language- extra-class"><pre class="language-text"><code>it('异步请求应该返回一个对象', function(done){
+  request
+    .get('https://api.github.com')
+    .end(function(err, res){
+      expect(res).to.be.an('object');
+      done();
+    });
+});
+</code></pre></div><p>运行下面命令，可以看到这个测试会通过。</p> <div class="language- extra-class"><pre class="language-text"><code>$ mocha -t 10000 async.test.js
+</code></pre></div><p>另外，Mocha内置对Promise的支持，允许直接返回Promise，等到它的状态改变，再执行断言，而不用显式调用<code>done</code>方法。请看<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo05/promise.test.js" target="_blank" rel="noopener noreferrer"><code>promise.test.js</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <div class="language- extra-class"><pre class="language-text"><code>it('异步请求应该返回一个对象', function() {
+  return fetch('https://api.github.com')
+    .then(function(res) {
+      return res.json();
+    }).then(function(json) {
+      expect(json).to.be.an('object');
+    });
+});
+</code></pre></div><h3 id="测试用例的钩子"><a href="#测试用例的钩子" class="header-anchor">#</a> 测试用例的钩子</h3> <p>Mocha在<code>describe</code>块之中，提供测试用例的四个钩子：<code>before()</code>、<code>after()</code>、<code>beforeEach()</code>和<code>afterEach()</code>。它们会在指定时间执行。</p> <div class="language- extra-class"><pre class="language-text"><code>describe('hooks', function() {
+
+  before(function() {
+    // 在本区块的所有测试用例之前执行
+  });
+
+  after(function() {
+    // 在本区块的所有测试用例之后执行
+  });
+
+  beforeEach(function() {
+    // 在本区块的每个测试用例之前执行
+  });
+
+  afterEach(function() {
+    // 在本区块的每个测试用例之后执行
+  });
+
+  // test cases
+});
+</code></pre></div><p>进入<a href="https://github.com/ruanyf/mocha-demos/tree/master/demo06" target="_blank" rel="noopener noreferrer"><code>demo06</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>子目录，可以看到下面两个例子。首先是<code>beforeEach</code>的例子<a href="https://github.com/ruanyf/mocha-demos/blob/master/demo06/beforeEach.test.js" target="_blank" rel="noopener noreferrer"><code>beforeEach.test.js</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <div class="language- extra-class"><pre class="language-text"><code>// beforeEach.test.js
+describe('beforeEach示例', function() {
+  var foo = false;
+
+  beforeEach(function() {
+    foo = true;
+  });
+
+  it('修改全局变量应该成功', function() {
+    expect(foo).to.be.equal(true);
+  });
+});
+</code></pre></div><!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2/28/2022, 6:10:10 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.54364397.js" defer></script><script src="/assets/js/2.ea1d54eb.js" defer></script><script src="/assets/js/69.a714dcd7.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用Docker,Docker-compose 快速 搭建Gitlab | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.54364397.js" as="script"><link rel="preload" href="/assets/js/2.ea1d54eb.js" as="script"><link rel="preload" href="/assets/js/57.9398ec97.js" as="script"><link rel="prefetch" href="/assets/js/10.a13ce92a.js"><link rel="prefetch" href="/assets/js/11.c5493f60.js"><link rel="prefetch" href="/assets/js/12.0341abb4.js"><link rel="prefetch" href="/assets/js/13.ecaa558e.js"><link rel="prefetch" href="/assets/js/14.d55c9a2b.js"><link rel="prefetch" href="/assets/js/15.b24cd0ee.js"><link rel="prefetch" href="/assets/js/16.7c38e7c7.js"><link rel="prefetch" href="/assets/js/17.fd15e051.js"><link rel="prefetch" href="/assets/js/18.a3beb2d7.js"><link rel="prefetch" href="/assets/js/19.4f970c5e.js"><link rel="prefetch" href="/assets/js/20.35661968.js"><link rel="prefetch" href="/assets/js/21.ec64587c.js"><link rel="prefetch" href="/assets/js/22.6e07b501.js"><link rel="prefetch" href="/assets/js/23.ba36c783.js"><link rel="prefetch" href="/assets/js/24.b6707acb.js"><link rel="prefetch" href="/assets/js/25.2dbfa4d5.js"><link rel="prefetch" href="/assets/js/26.03e28b6f.js"><link rel="prefetch" href="/assets/js/27.fd4a5887.js"><link rel="prefetch" href="/assets/js/28.364e737b.js"><link rel="prefetch" href="/assets/js/29.29942848.js"><link rel="prefetch" href="/assets/js/3.c931e90d.js"><link rel="prefetch" href="/assets/js/30.9185c6d1.js"><link rel="prefetch" href="/assets/js/31.a35eac1d.js"><link rel="prefetch" href="/assets/js/32.8096a1e0.js"><link rel="prefetch" href="/assets/js/33.407a449d.js"><link rel="prefetch" href="/assets/js/34.e2f81dbb.js"><link rel="prefetch" href="/assets/js/35.028c502e.js"><link rel="prefetch" href="/assets/js/36.2de3185a.js"><link rel="prefetch" href="/assets/js/37.7608c3f2.js"><link rel="prefetch" href="/assets/js/38.20651de8.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.9cbc8b55.js"><link rel="prefetch" href="/assets/js/40.4be51e8d.js"><link rel="prefetch" href="/assets/js/41.36a2e3f0.js"><link rel="prefetch" href="/assets/js/42.2cbf9afa.js"><link rel="prefetch" href="/assets/js/43.ce1c8073.js"><link rel="prefetch" href="/assets/js/44.b494f3f7.js"><link rel="prefetch" href="/assets/js/45.34035be8.js"><link rel="prefetch" href="/assets/js/46.ed534a1d.js"><link rel="prefetch" href="/assets/js/47.64e976a5.js"><link rel="prefetch" href="/assets/js/48.e197e0d5.js"><link rel="prefetch" href="/assets/js/49.f76dee05.js"><link rel="prefetch" href="/assets/js/5.1508cebe.js"><link rel="prefetch" href="/assets/js/50.ac9a636f.js"><link rel="prefetch" href="/assets/js/51.d924871e.js"><link rel="prefetch" href="/assets/js/52.388f4e26.js"><link rel="prefetch" href="/assets/js/53.f60541dc.js"><link rel="prefetch" href="/assets/js/54.f37be02d.js"><link rel="prefetch" href="/assets/js/55.06e6ce80.js"><link rel="prefetch" href="/assets/js/56.5f19dd4d.js"><link rel="prefetch" href="/assets/js/58.503e48ce.js"><link rel="prefetch" href="/assets/js/59.35603c7d.js"><link rel="prefetch" href="/assets/js/6.3c902562.js"><link rel="prefetch" href="/assets/js/60.f34179ae.js"><link rel="prefetch" href="/assets/js/61.c16de7a0.js"><link rel="prefetch" href="/assets/js/62.ac7dd70d.js"><link rel="prefetch" href="/assets/js/63.1f724cb5.js"><link rel="prefetch" href="/assets/js/64.85777ea3.js"><link rel="prefetch" href="/assets/js/65.270d5490.js"><link rel="prefetch" href="/assets/js/66.1c5e2582.js"><link rel="prefetch" href="/assets/js/67.87624fec.js"><link rel="prefetch" href="/assets/js/68.aca2d12f.js"><link rel="prefetch" href="/assets/js/69.a714dcd7.js"><link rel="prefetch" href="/assets/js/7.49f43c50.js"><link rel="prefetch" href="/assets/js/8.687ec09d.js"><link rel="prefetch" href="/assets/js/9.0a3f6f96.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/linux/" aria-current="page" class="sidebar-link">查看系统命令</a></li><li><a href="/linux/linux01.html" class="sidebar-link">docker入门之安装教程</a></li><li><a href="/linux/linux02.html" class="sidebar-link">ssh密钥方式远程链接linux</a></li><li><a href="/linux/linux03.html" aria-current="page" class="active sidebar-link">使用Docker,Docker-compose 快速 搭建Gitlab</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux03.html#docker-搭建-gitlab" class="sidebar-link">Docker 搭建 gitlab</a></li><li class="sidebar-sub-header"><a href="/linux/linux03.html#使用-docker-compose-来安装-gitlab" class="sidebar-link">使用 docker-compose 来安装 Gitlab</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux03.html#_1、先删除-上面-安装的-gitlab" class="sidebar-link">1、先删除 上面 安装的 Gitlab</a></li><li class="sidebar-sub-header"><a href="/linux/linux03.html#_2、创建编辑-docker-compose-yml-文件" class="sidebar-link">2、创建编辑 docker-compose.yml 文件</a></li><li class="sidebar-sub-header"><a href="/linux/linux03.html#附件-完整的-gitlab-docker-compose-配置" class="sidebar-link">附件：完整的 gitlab docker-compose 配置</a></li></ul></li></ul></li><li><a href="/linux/docker01.html" class="sidebar-link">docker 常用命令</a></li><li><a href="/linux/mongodb01.html" class="sidebar-link">安装</a></li><li><a href="/linux/mongoose.html" class="sidebar-link">核心概念</a></li><li><a href="/linux/redis.html" class="sidebar-link">redis笔记1</a></li><li><a href="/linux/redis01.html" class="sidebar-link">redis笔记2</a></li><li><a href="/linux/redis02.html" class="sidebar-link">redis笔记3</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用docker-docker-compose-快速-搭建gitlab"><a href="#使用docker-docker-compose-快速-搭建gitlab" class="header-anchor">#</a> 使用Docker,Docker-compose 快速 搭建Gitlab</h1> <blockquote><p>** gitlab 至少需要2核2G的配置 **</p></blockquote> <h2 id="docker-搭建-gitlab"><a href="#docker-搭建-gitlab" class="header-anchor">#</a> Docker 搭建 gitlab</h2> <p><a href="https://docs.gitlab.com/omnibus/docker/README.html" target="_blank" rel="noopener noreferrer">官方安装文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>官方文档 给出的搭建 gitlab命令只有下面这条命令：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">docker</span> run <span class="token parameter variable">--detach</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--hostname</span> gitlab.example.com <span class="token punctuation">\</span>
+  <span class="token parameter variable">--publish</span> <span class="token number">443</span>:443 <span class="token parameter variable">--publish</span> <span class="token number">80</span>:80 <span class="token parameter variable">--publish</span> <span class="token number">22</span>:22 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--name</span> gitlab <span class="token punctuation">\</span>
+  <span class="token parameter variable">--restart</span> always <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> /srv/gitlab/config:/etc/gitlab <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> /srv/gitlab/logs:/var/log/gitlab <span class="token punctuation">\</span>
+  <span class="token parameter variable">--volume</span> /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>
+  gitlab/gitlab-ce:latest
+</code></pre></div><ul><li>--detach ： 跟 -d 参数 相同，表示  后台 运行</li> <li>--hostname:  主机域名（没有域名 可有 直接写 ip，有域名的</li> <li>-- publish:  标识使用开放的端口  443 一般是 https 端口，80端口一般是 默认的访问端口，22 是 克隆需要访问的端口，（一般 ssh 走的也是 22端口，直接走22 端口 容易 被攻击）</li> <li>--name:  镜像名称</li> <li>--restart:  docker 服务重启的时候 ，gitlab服务也自动重启</li> <li>--volume:  将 gitlab 上的一些数据和日志 配置 映射到 宿主机上</li></ul> <p>但在这里，我们不采用默认的配置，修改一些配置，所有</p> <p>将上面的命令 复制 修改成 下面的样式，然后运行下面的命令：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">docker</span> run <span class="token parameter variable">--detach</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--hostname</span> ***.**.**.** <span class="token punctuation">\</span>
+  <span class="token parameter variable">--publish</span> <span class="token number">13800</span>:80 <span class="token parameter variable">--publish</span> <span class="token number">13822</span>:22 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--name</span> gitlab_test <span class="token punctuation">\</span>
+  <span class="token parameter variable">--restart</span> always <span class="token punctuation">\</span>
+  gitlab/gitlab-ce:latest
+</code></pre></div><p>运行命令 结果如下：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># sudo docker run --detach \</span>
+<span class="token operator">&gt;</span>   <span class="token parameter variable">--hostname</span> 宿主机的ip <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   <span class="token parameter variable">--publish</span> <span class="token number">13800</span>:80 <span class="token parameter variable">--publish</span> <span class="token number">13822</span>:22 <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   <span class="token parameter variable">--name</span> gitlab_test <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   <span class="token parameter variable">--restart</span> always <span class="token punctuation">\</span>
+<span class="token operator">&gt;</span>   gitlab/gitlab-ce:latest
+Unable to <span class="token function">find</span> image <span class="token string">'gitlab/gitlab-ce:latest'</span> locally
+latest: Pulling from gitlab/gitlab-ce
+e80174c8b43b: Pull complete 
+d1072db285cc: Pull complete 
+858453671e67: Pull complete 
+3d07b1124f98: Pull complete 
+43d9dea843dd: Pull complete 
+cab5a34e8fb7: Pull complete 
+635509edca6d: Pull complete 
+f91b4dfa0ce0: Pull complete 
+a3ea8e47245c: Pull complete 
+e6ad628e595f: Pull complete 
+Digest: sha256:bbd8d61fbf66321e454225001e67ff5bf19ef9f64c1f26210ea4479130cc4e5d
+Status: Downloaded newer image <span class="token keyword">for</span> gitlab/gitlab-ce:latest
+0308ae8385076c8be779d1e2e1d61a0565e8a0d10443b2a8a6280a977794e325
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                    PORTS                                                   NAMES
+0308ae838507        gitlab/gitlab-ce:latest   <span class="token string">&quot;/assets/wrapper&quot;</span>        <span class="token number">49</span> minutes ago      Up <span class="token number">49</span> minutes <span class="token punctuation">(</span>healthy<span class="token punctuation">)</span>   <span class="token number">443</span>/tcp, <span class="token number">0.0</span>.0.0:13822-<span class="token operator">&gt;</span><span class="token number">22</span>/tcp, <span class="token number">0.0</span>.0.0:13800-<span class="token operator">&gt;</span><span class="token number">80</span>/tcp   gitlab_test
+d68f1d62a0f2        mysql                     <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   About an hour ago   Up About an hour          <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28003-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp                      home_mysql2_1
+37fd5e41efed        mysql                     <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   About an hour ago   Up About an hour          <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28002-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp                      home_mysql1_1
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># docker ps |grep gitlab_test</span>
+0308ae838507        gitlab/gitlab-ce:latest   <span class="token string">&quot;/assets/wrapper&quot;</span>        <span class="token number">50</span> minutes ago      Up <span class="token number">50</span> minutes <span class="token punctuation">(</span>healthy<span class="token punctuation">)</span>   <span class="token number">443</span>/tcp, <span class="token number">0.0</span>.0.0:13822-<span class="token operator">&gt;</span><span class="token number">22</span>/tcp, <span class="token number">0.0</span>.0.0:13800-<span class="token operator">&gt;</span><span class="token number">80</span>/tcp   gitlab_test
+<span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre></div><p>然后 开放 防火墙 13800 对外端口</p> <div class="language-shell extra-class"><pre class="language-shell"><code>firewall-cmd --add-port<span class="token operator">=</span><span class="token number">13800</span>/tcp <span class="token parameter variable">--permanent</span>
+</code></pre></div><p>打印 docker 日志</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> logs <span class="token parameter variable">-f</span> gitlab_test
+</code></pre></div><p>[gitlab访问]（ http://122.51.167.54:13800/ ）</p> <h2 id="使用-docker-compose-来安装-gitlab"><a href="#使用-docker-compose-来安装-gitlab" class="header-anchor">#</a> 使用 docker-compose 来安装 Gitlab</h2> <h3 id="_1、先删除-上面-安装的-gitlab"><a href="#_1、先删除-上面-安装的-gitlab" class="header-anchor">#</a> 1、先删除 上面 安装的 Gitlab</h3> <ul><li><code>docker ps</code> 或者 <code>docker ps -a</code></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos ~<span class="token punctuation">]</span><span class="token comment"># docker ps -a</span>
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                PORTS                                                   NAMES
+0308ae838507        gitlab/gitlab-ce:latest   <span class="token string">&quot;/assets/wrapper&quot;</span>        <span class="token number">6</span> days ago          Up <span class="token number">6</span> days <span class="token punctuation">(</span>healthy<span class="token punctuation">)</span>   <span class="token number">443</span>/tcp, <span class="token number">0.0</span>.0.0:13822-<span class="token operator">&gt;</span><span class="token number">22</span>/tcp, <span class="token number">0.0</span>.0.0:13800-<span class="token operator">&gt;</span><span class="token number">80</span>/tcp   gitlab_test
+d68f1d62a0f2        mysql                     <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">6</span> days ago          Up <span class="token number">6</span> days             <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28003-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp                      home_mysql2_1
+37fd5e41efed        mysql
+</code></pre></div><ul><li><p>停止 Gitlab_test 镜像：<code>docker stop gitlab_test</code></p></li> <li><p>删除 gitlab_test 镜像： docker rm gitlab_test</p></li></ul> <h3 id="_2、创建编辑-docker-compose-yml-文件"><a href="#_2、创建编辑-docker-compose-yml-文件" class="header-anchor">#</a> 2、创建编辑 docker-compose.yml 文件</h3> <blockquote><p>**前提是 已安装好  docker-compose **</p></blockquote> <ul><li>进入 到 某个目录（自定义）</li> <li>创建或编辑已有的 docker-compose.yml 文件</li></ul> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># docker-compose.yml</span>
+
+<span class="token key atrule">web</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">'gitlab/gitlab-ce:latest'</span>
+  <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+  <span class="token key atrule">hostname</span><span class="token punctuation">:</span> <span class="token string">'122.51.167.54'</span>
+  <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token key atrule">GITLAB_OMNIBUS_CONFIG</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+      external_url 'http://122.51.167.54'
+      # Add any other gitlab.rb configuration here, each on its own line</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'13800:80'</span>
+    <span class="token punctuation">-</span> <span class="token string">'13822:22'</span>
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'/srv/gitlab/config:/etc/gitlab'</span>
+    <span class="token punctuation">-</span> <span class="token string">'/srv/gitlab/logs:/var/log/gitlab'</span>
+    <span class="token punctuation">-</span> <span class="token string">'/srv/gitlab/data:/var/opt/gitlab'</span>
+
+</code></pre></div><ul><li>保存退出后  运行 <code>docker-compose up -d</code>命令</li> <li>之后 浏览器打开 122.51.167.54:13800 就可以访问 gitlab</li></ul> <h3 id="附件-完整的-gitlab-docker-compose-配置"><a href="#附件-完整的-gitlab-docker-compose-配置" class="header-anchor">#</a> 附件：完整的 gitlab docker-compose 配置</h3> <div class="language- extra-class"><pre class="language-text"><code>version: &quot;2&quot;
+
+services:
+  redis:
+    restart: always
+    image: sameersbn/redis:4.0.9-2
+    command:
+      - --loglevel warning
+    volumes:
+      - redis-data:/temp/lib/redis:Z
+
+  postgresql:
+    restart: always
+    image: sameersbn/postgresql:10-2
+    volumes:
+      - postgresql-data:/temp/lib/postgresql:Z
+    environment:
+      - DB_USER=gitlab
+      - DB_PASS=password
+      - DB_NAME=gitlabhq_production
+      - DB_EXTENSION=pg_trgm
+
+  gitlab:
+    restart: always
+    image: sameersbn/gitlab:12.4.3
+    depends_on:
+      - redis
+      - postgresql
+    ports:
+      - &quot;13800:80&quot;
+      - &quot;13822:22&quot;
+    volumes:
+      - gitlab-data:/temp/git/data:Z
+    environment:
+      - DEBUG=false
+
+      - DB_ADAPTER=postgresql
+      - DB_HOST=postgresql
+      - DB_PORT=5432
+      - DB_USER=gitlab
+      - DB_PASS=password
+      - DB_NAME=gitlabhq_production
+
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+      - TZ=Asia/Kolkata
+      - GITLAB_TIMEZONE=Kolkata
+
+      - GITLAB_HTTPS=true
+      - SSL_SELF_SIGNED=true
+
+      - GITLAB_HOST=122.51.167.54
+      - GITLAB_PORT=13800
+      - GITLAB_SSH_PORT=13822
+      - GITLAB_RELATIVE_URL_ROOT=
+      - GITLAB_SECRETS_DB_KEY_BASE=long-and-random-alphanumeric-string
+      - GITLAB_SECRETS_SECRET_KEY_BASE=long-and-random-alphanumeric-string
+      - GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alphanumeric-string
+
+      - GITLAB_ROOT_PASSWORD=12345678
+      - GITLAB_ROOT_EMAIL=qiaoxinhen@sina.com
+
+      - GITLAB_NOTIFY_ON_BROKEN_BUILDS=true
+      - GITLAB_NOTIFY_PUSHER=false
+
+      - GITLAB_EMAIL=notifications@example.com
+      - GITLAB_EMAIL_REPLY_TO=noreply@example.com
+      - GITLAB_INCOMING_EMAIL_ADDRESS=reply@example.com
+
+      - GITLAB_BACKUP_SCHEDULE=daily
+      - GITLAB_BACKUP_TIME=01:00
+
+      - SMTP_ENABLED=false
+      - SMTP_DOMAIN=www.example.com
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=mailer@example.com
+      - SMTP_PASS=password
+      - SMTP_STARTTLS=true
+      - SMTP_AUTHENTICATION=login
+
+      - IMAP_ENABLED=false
+      - IMAP_HOST=imap.gmail.com
+      - IMAP_PORT=993
+      - IMAP_USER=mailer@example.com
+      - IMAP_PASS=password
+      - IMAP_SSL=true
+      - IMAP_STARTTLS=false
+
+      - OAUTH_ENABLED=false
+      - OAUTH_AUTO_SIGN_IN_WITH_PROVIDER=
+      - OAUTH_ALLOW_SSO=
+      - OAUTH_BLOCK_AUTO_CREATED_USERS=true
+      - OAUTH_AUTO_LINK_LDAP_USER=false
+      - OAUTH_AUTO_LINK_SAML_USER=false
+      - OAUTH_EXTERNAL_PROVIDERS=
+
+      - OAUTH_CAS3_LABEL=cas3
+      - OAUTH_CAS3_SERVER=
+      - OAUTH_CAS3_DISABLE_SSL_VERIFICATION=false
+      - OAUTH_CAS3_LOGIN_URL=/cas/login
+      - OAUTH_CAS3_VALIDATE_URL=/cas/p3/serviceValidate
+      - OAUTH_CAS3_LOGOUT_URL=/cas/logout
+
+      - OAUTH_GOOGLE_API_KEY=
+      - OAUTH_GOOGLE_APP_SECRET=
+      - OAUTH_GOOGLE_RESTRICT_DOMAIN=
+
+      - OAUTH_FACEBOOK_API_KEY=
+      - OAUTH_FACEBOOK_APP_SECRET=
+
+      - OAUTH_TWITTER_API_KEY=
+      - OAUTH_TWITTER_APP_SECRET=
+
+      - OAUTH_GITHUB_API_KEY=
+      - OAUTH_GITHUB_APP_SECRET=
+      - OAUTH_GITHUB_URL=
+      - OAUTH_GITHUB_VERIFY_SSL=
+
+      - OAUTH_GITLAB_API_KEY=
+      - OAUTH_GITLAB_APP_SECRET=
+
+      - OAUTH_BITBUCKET_API_KEY=
+      - OAUTH_BITBUCKET_APP_SECRET=
+
+      - OAUTH_SAML_ASSERTION_CONSUMER_SERVICE_URL=
+      - OAUTH_SAML_IDP_CERT_FINGERPRINT=
+      - OAUTH_SAML_IDP_SSO_TARGET_URL=
+      - OAUTH_SAML_ISSUER=
+      - OAUTH_SAML_LABEL=&quot;Our SAML Provider&quot;
+      - OAUTH_SAML_NAME_IDENTIFIER_FORMAT=urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+      - OAUTH_SAML_GROUPS_ATTRIBUTE=
+      - OAUTH_SAML_EXTERNAL_GROUPS=
+      - OAUTH_SAML_ATTRIBUTE_STATEMENTS_EMAIL=
+      - OAUTH_SAML_ATTRIBUTE_STATEMENTS_NAME=
+      - OAUTH_SAML_ATTRIBUTE_STATEMENTS_USERNAME=
+      - OAUTH_SAML_ATTRIBUTE_STATEMENTS_FIRST_NAME=
+      - OAUTH_SAML_ATTRIBUTE_STATEMENTS_LAST_NAME=
+
+      - OAUTH_CROWD_SERVER_URL=
+      - OAUTH_CROWD_APP_NAME=
+      - OAUTH_CROWD_APP_PASSWORD=
+
+      - OAUTH_AUTH0_CLIENT_ID=
+      - OAUTH_AUTH0_CLIENT_SECRET=
+      - OAUTH_AUTH0_DOMAIN=
+      - OAUTH_AUTH0_SCOPE=
+
+      - OAUTH_AZURE_API_KEY=
+      - OAUTH_AZURE_API_SECRET=
+      - OAUTH_AZURE_TENANT_ID=
+
+volumes:
+  redis-data:
+  postgresql-data:
+  gitlab-data:
+
+</code></pre></div><!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/10/2020, 3:16:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/linux02.html" class="prev">
+        ssh密钥方式远程链接linux
+      </a></span> <span class="next"><a href="/linux/docker01.html">
+        docker 常用命令
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.54364397.js" defer></script><script src="/assets/js/2.ea1d54eb.js" defer></script><script src="/assets/js/57.9398ec97.js" defer></script>
+  </body>
+</html>

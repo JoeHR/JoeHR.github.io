@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker 常用命令 | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.54364397.js" as="script"><link rel="preload" href="/assets/js/2.ea1d54eb.js" as="script"><link rel="preload" href="/assets/js/55.06e6ce80.js" as="script"><link rel="prefetch" href="/assets/js/10.a13ce92a.js"><link rel="prefetch" href="/assets/js/11.c5493f60.js"><link rel="prefetch" href="/assets/js/12.0341abb4.js"><link rel="prefetch" href="/assets/js/13.ecaa558e.js"><link rel="prefetch" href="/assets/js/14.d55c9a2b.js"><link rel="prefetch" href="/assets/js/15.b24cd0ee.js"><link rel="prefetch" href="/assets/js/16.7c38e7c7.js"><link rel="prefetch" href="/assets/js/17.fd15e051.js"><link rel="prefetch" href="/assets/js/18.a3beb2d7.js"><link rel="prefetch" href="/assets/js/19.4f970c5e.js"><link rel="prefetch" href="/assets/js/20.35661968.js"><link rel="prefetch" href="/assets/js/21.ec64587c.js"><link rel="prefetch" href="/assets/js/22.6e07b501.js"><link rel="prefetch" href="/assets/js/23.ba36c783.js"><link rel="prefetch" href="/assets/js/24.b6707acb.js"><link rel="prefetch" href="/assets/js/25.2dbfa4d5.js"><link rel="prefetch" href="/assets/js/26.03e28b6f.js"><link rel="prefetch" href="/assets/js/27.fd4a5887.js"><link rel="prefetch" href="/assets/js/28.364e737b.js"><link rel="prefetch" href="/assets/js/29.29942848.js"><link rel="prefetch" href="/assets/js/3.c931e90d.js"><link rel="prefetch" href="/assets/js/30.9185c6d1.js"><link rel="prefetch" href="/assets/js/31.a35eac1d.js"><link rel="prefetch" href="/assets/js/32.8096a1e0.js"><link rel="prefetch" href="/assets/js/33.407a449d.js"><link rel="prefetch" href="/assets/js/34.e2f81dbb.js"><link rel="prefetch" href="/assets/js/35.028c502e.js"><link rel="prefetch" href="/assets/js/36.2de3185a.js"><link rel="prefetch" href="/assets/js/37.7608c3f2.js"><link rel="prefetch" href="/assets/js/38.20651de8.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.9cbc8b55.js"><link rel="prefetch" href="/assets/js/40.4be51e8d.js"><link rel="prefetch" href="/assets/js/41.36a2e3f0.js"><link rel="prefetch" href="/assets/js/42.2cbf9afa.js"><link rel="prefetch" href="/assets/js/43.ce1c8073.js"><link rel="prefetch" href="/assets/js/44.b494f3f7.js"><link rel="prefetch" href="/assets/js/45.34035be8.js"><link rel="prefetch" href="/assets/js/46.ed534a1d.js"><link rel="prefetch" href="/assets/js/47.64e976a5.js"><link rel="prefetch" href="/assets/js/48.e197e0d5.js"><link rel="prefetch" href="/assets/js/49.f76dee05.js"><link rel="prefetch" href="/assets/js/5.1508cebe.js"><link rel="prefetch" href="/assets/js/50.ac9a636f.js"><link rel="prefetch" href="/assets/js/51.d924871e.js"><link rel="prefetch" href="/assets/js/52.388f4e26.js"><link rel="prefetch" href="/assets/js/53.f60541dc.js"><link rel="prefetch" href="/assets/js/54.f37be02d.js"><link rel="prefetch" href="/assets/js/56.5f19dd4d.js"><link rel="prefetch" href="/assets/js/57.9398ec97.js"><link rel="prefetch" href="/assets/js/58.503e48ce.js"><link rel="prefetch" href="/assets/js/59.35603c7d.js"><link rel="prefetch" href="/assets/js/6.3c902562.js"><link rel="prefetch" href="/assets/js/60.f34179ae.js"><link rel="prefetch" href="/assets/js/61.c16de7a0.js"><link rel="prefetch" href="/assets/js/62.ac7dd70d.js"><link rel="prefetch" href="/assets/js/63.1f724cb5.js"><link rel="prefetch" href="/assets/js/64.85777ea3.js"><link rel="prefetch" href="/assets/js/65.270d5490.js"><link rel="prefetch" href="/assets/js/66.1c5e2582.js"><link rel="prefetch" href="/assets/js/67.87624fec.js"><link rel="prefetch" href="/assets/js/68.aca2d12f.js"><link rel="prefetch" href="/assets/js/69.a714dcd7.js"><link rel="prefetch" href="/assets/js/7.49f43c50.js"><link rel="prefetch" href="/assets/js/8.687ec09d.js"><link rel="prefetch" href="/assets/js/9.0a3f6f96.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/linux/" aria-current="page" class="sidebar-link">查看系统命令</a></li><li><a href="/linux/linux01.html" class="sidebar-link">docker入门之安装教程</a></li><li><a href="/linux/linux02.html" class="sidebar-link">ssh密钥方式远程链接linux</a></li><li><a href="/linux/linux03.html" class="sidebar-link">使用Docker,Docker-compose 快速 搭建Gitlab</a></li><li><a href="/linux/docker01.html" aria-current="page" class="active sidebar-link">docker 常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/docker01.html#docker-常用命令" class="sidebar-link">docker 常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/docker01.html#列出所有容器id" class="sidebar-link">列出所有容器ID</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#查看所有运行或者已停止-运行完毕的-容器" class="sidebar-link">查看所有运行或者已停止（运行完毕的）容器</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#停止所有的-docker容器-这样才能狗删除-其中的-images镜像" class="sidebar-link">停止所有的 docker容器，这样才能狗删除 其中的 images镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除所有容器" class="sidebar-link">删除所有容器</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#查看当前所有镜像" class="sidebar-link">查看当前所有镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除指定的-镜像-可以通过-镜像的-id-来指定删除谁" class="sidebar-link">删除指定的 镜像，可以通过 镜像的 id 来指定删除谁</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除-untagged-images-也就是那些-tag-为-的镜像" class="sidebar-link">删除 untagged images,也就是那些 tag  为  的镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除全部镜像" class="sidebar-link">删除全部镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#强制删除全部镜像" class="sidebar-link">强制删除全部镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#从容器复制到宿主机" class="sidebar-link">从容器复制到宿主机</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#从宿主机复制到容器" class="sidebar-link">从宿主机复制到容器</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除所有停止的容器" class="sidebar-link">删除所有停止的容器</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#删除所有不使用-停止的-的镜像" class="sidebar-link">删除所有不使用（停止的）的镜像</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#停止、启动、杀死、重启-一个容器" class="sidebar-link">停止、启动、杀死、重启 一个容器</a></li><li class="sidebar-sub-header"><a href="/linux/docker01.html#docker-进入容器-查看配置文件" class="sidebar-link">docker 进入容器，查看配置文件</a></li></ul></li></ul></li><li><a href="/linux/mongodb01.html" class="sidebar-link">安装</a></li><li><a href="/linux/mongoose.html" class="sidebar-link">核心概念</a></li><li><a href="/linux/redis.html" class="sidebar-link">redis笔记1</a></li><li><a href="/linux/redis01.html" class="sidebar-link">redis笔记2</a></li><li><a href="/linux/redis02.html" class="sidebar-link">redis笔记3</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="docker-常用命令"><a href="#docker-常用命令" class="header-anchor">#</a> docker 常用命令</h2> <h3 id="列出所有容器id"><a href="#列出所有容器id" class="header-anchor">#</a> 列出所有容器ID</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-aq</span>
+</code></pre></div><h3 id="查看所有运行或者已停止-运行完毕的-容器"><a href="#查看所有运行或者已停止-运行完毕的-容器" class="header-anchor">#</a> 查看所有运行或者已停止（运行完毕的）容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span>
+</code></pre></div><h3 id="停止所有的-docker容器-这样才能狗删除-其中的-images镜像"><a href="#停止所有的-docker容器-这样才能狗删除-其中的-images镜像" class="header-anchor">#</a> 停止所有的 docker容器，这样才能狗删除 其中的 images镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> stop <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span> <span class="token parameter variable">-q</span><span class="token variable">)</span></span>
+
+或者
+
+<span class="token function">docker</span> stop <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-aq</span><span class="token variable">)</span></span>
+</code></pre></div><h3 id="删除所有容器"><a href="#删除所有容器" class="header-anchor">#</a> 删除所有容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span> <span class="token parameter variable">-q</span><span class="token variable">)</span></span>
+
+或者 
+
+<span class="token function">docker</span> <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-aq</span><span class="token variable">)</span></span>
+</code></pre></div><h3 id="查看当前所有镜像"><a href="#查看当前所有镜像" class="header-anchor">#</a> 查看当前所有镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> images
+</code></pre></div><h3 id="删除指定的-镜像-可以通过-镜像的-id-来指定删除谁"><a href="#删除指定的-镜像-可以通过-镜像的-id-来指定删除谁" class="header-anchor">#</a> 删除指定的 镜像，可以通过 镜像的 id 来指定删除谁</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> rmi <span class="token operator">&lt;</span>image id<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="删除-untagged-images-也就是那些-tag-为-的镜像"><a href="#删除-untagged-images-也就是那些-tag-为-的镜像" class="header-anchor">#</a> 删除 untagged images,也就是那些 tag  为 <none> 的镜像</none></h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> rmi <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> images <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">&quot;^&lt;none&gt;&quot;</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&quot;{print <span class="token variable">$3</span>}&quot;</span><span class="token variable">)</span></span>
+</code></pre></div><h3 id="删除全部镜像"><a href="#删除全部镜像" class="header-anchor">#</a> 删除全部镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> rmi <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> images <span class="token parameter variable">-q</span><span class="token variable">)</span></span>
+</code></pre></div><h3 id="强制删除全部镜像"><a href="#强制删除全部镜像" class="header-anchor">#</a> 强制删除全部镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> rmi <span class="token parameter variable">-f</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> images <span class="token parameter variable">-q</span><span class="token variable">)</span></span>
+</code></pre></div><h3 id="从容器复制到宿主机"><a href="#从容器复制到宿主机" class="header-anchor">#</a> 从容器复制到宿主机</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">cp</span> 容器名： 容器路径 宿主机路径
+
+例如：
+<span class="token function">docker</span> <span class="token function">cp</span> tomcat：/webapps/js/text.js /home/admin
+</code></pre></div><h3 id="从宿主机复制到容器"><a href="#从宿主机复制到容器" class="header-anchor">#</a> 从宿主机复制到容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token function">cp</span> 宿主路径中文件      容器名  容器路径
+
+例如：
+<span class="token function">docker</span> <span class="token function">cp</span> /home/admin/text.js tomcat：/webapps/js
+</code></pre></div><h3 id="删除所有停止的容器"><a href="#删除所有停止的容器" class="header-anchor">#</a> 删除所有停止的容器</h3> <div class="language-she extra-class"><pre class="language-text"><code>docker container prune
+</code></pre></div><h3 id="删除所有不使用-停止的-的镜像"><a href="#删除所有不使用-停止的-的镜像" class="header-anchor">#</a> 删除所有不使用（停止的）的镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> image prune <span class="token parameter variable">--force</span> <span class="token parameter variable">--all</span>
+
+或者
+<span class="token function">docker</span> image prune <span class="token parameter variable">-f</span> <span class="token parameter variable">-a</span>
+</code></pre></div><h3 id="停止、启动、杀死、重启-一个容器"><a href="#停止、启动、杀死、重启-一个容器" class="header-anchor">#</a> 停止、启动、杀死、重启 一个容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> stop Name或者Id
+<span class="token function">docker</span> start Name或者Id
+<span class="token function">docker</span> <span class="token function">kill</span> Name或者Id
+<span class="token function">docker</span> restart Name或者Id
+</code></pre></div><h3 id="docker-进入容器-查看配置文件"><a href="#docker-进入容器-查看配置文件" class="header-anchor">#</a> docker 进入容器，查看配置文件</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span>	<span class="token builtin class-name">:</span> 在运行的容器中执行命令
+		<span class="token parameter variable">-d</span> <span class="token builtin class-name">:</span> 分离模式，在后台运行
+		<span class="token parameter variable">-i</span> <span class="token builtin class-name">:</span> 即使没有附加也保持STDIN（标准输入）打开，以交互模式运行容器，通常与 <span class="token parameter variable">-t</span> 同时使用
+		<span class="token parameter variable">-t</span> ：为容器重新分配一个伪输入终端，通常与 <span class="token parameter variable">-i</span> 同时使用
+		
+例如：
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-if</span> f94d2c317477 /bin/bash
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> testdb mongo
+</code></pre></div><p>修改配置、退出容器</p> <div class="language-shel extra-class"><pre class="language-text"><code>1、如果要正常退出不关闭容器，请按Ctrl+P+Q进行退出容器
+2、如果使用exit退出，那么在退出之后会关闭容器，可以使用下面的流程进行恢复
+使用docker restart命令重启容器
+使用docker attach命令进入容器
+</code></pre></div><!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/10/2020, 3:16:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/linux03.html" class="prev">
+        使用Docker,Docker-compose 快速 搭建Gitlab
+      </a></span> <span class="next"><a href="/linux/mongodb01.html">
+        安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.54364397.js" defer></script><script src="/assets/js/2.ea1d54eb.js" defer></script><script src="/assets/js/55.06e6ce80.js" defer></script>
+  </body>
+</html>

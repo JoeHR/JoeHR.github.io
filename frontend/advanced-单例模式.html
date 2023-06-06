@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>何为单例模式 | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.54364397.js" as="script"><link rel="preload" href="/assets/js/2.ea1d54eb.js" as="script"><link rel="preload" href="/assets/js/37.7608c3f2.js" as="script"><link rel="prefetch" href="/assets/js/10.a13ce92a.js"><link rel="prefetch" href="/assets/js/11.c5493f60.js"><link rel="prefetch" href="/assets/js/12.0341abb4.js"><link rel="prefetch" href="/assets/js/13.ecaa558e.js"><link rel="prefetch" href="/assets/js/14.d55c9a2b.js"><link rel="prefetch" href="/assets/js/15.b24cd0ee.js"><link rel="prefetch" href="/assets/js/16.7c38e7c7.js"><link rel="prefetch" href="/assets/js/17.fd15e051.js"><link rel="prefetch" href="/assets/js/18.a3beb2d7.js"><link rel="prefetch" href="/assets/js/19.4f970c5e.js"><link rel="prefetch" href="/assets/js/20.35661968.js"><link rel="prefetch" href="/assets/js/21.ec64587c.js"><link rel="prefetch" href="/assets/js/22.6e07b501.js"><link rel="prefetch" href="/assets/js/23.ba36c783.js"><link rel="prefetch" href="/assets/js/24.b6707acb.js"><link rel="prefetch" href="/assets/js/25.2dbfa4d5.js"><link rel="prefetch" href="/assets/js/26.03e28b6f.js"><link rel="prefetch" href="/assets/js/27.fd4a5887.js"><link rel="prefetch" href="/assets/js/28.364e737b.js"><link rel="prefetch" href="/assets/js/29.29942848.js"><link rel="prefetch" href="/assets/js/3.c931e90d.js"><link rel="prefetch" href="/assets/js/30.9185c6d1.js"><link rel="prefetch" href="/assets/js/31.a35eac1d.js"><link rel="prefetch" href="/assets/js/32.8096a1e0.js"><link rel="prefetch" href="/assets/js/33.407a449d.js"><link rel="prefetch" href="/assets/js/34.e2f81dbb.js"><link rel="prefetch" href="/assets/js/35.028c502e.js"><link rel="prefetch" href="/assets/js/36.2de3185a.js"><link rel="prefetch" href="/assets/js/38.20651de8.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.9cbc8b55.js"><link rel="prefetch" href="/assets/js/40.4be51e8d.js"><link rel="prefetch" href="/assets/js/41.36a2e3f0.js"><link rel="prefetch" href="/assets/js/42.2cbf9afa.js"><link rel="prefetch" href="/assets/js/43.ce1c8073.js"><link rel="prefetch" href="/assets/js/44.b494f3f7.js"><link rel="prefetch" href="/assets/js/45.34035be8.js"><link rel="prefetch" href="/assets/js/46.ed534a1d.js"><link rel="prefetch" href="/assets/js/47.64e976a5.js"><link rel="prefetch" href="/assets/js/48.e197e0d5.js"><link rel="prefetch" href="/assets/js/49.f76dee05.js"><link rel="prefetch" href="/assets/js/5.1508cebe.js"><link rel="prefetch" href="/assets/js/50.ac9a636f.js"><link rel="prefetch" href="/assets/js/51.d924871e.js"><link rel="prefetch" href="/assets/js/52.388f4e26.js"><link rel="prefetch" href="/assets/js/53.f60541dc.js"><link rel="prefetch" href="/assets/js/54.f37be02d.js"><link rel="prefetch" href="/assets/js/55.06e6ce80.js"><link rel="prefetch" href="/assets/js/56.5f19dd4d.js"><link rel="prefetch" href="/assets/js/57.9398ec97.js"><link rel="prefetch" href="/assets/js/58.503e48ce.js"><link rel="prefetch" href="/assets/js/59.35603c7d.js"><link rel="prefetch" href="/assets/js/6.3c902562.js"><link rel="prefetch" href="/assets/js/60.f34179ae.js"><link rel="prefetch" href="/assets/js/61.c16de7a0.js"><link rel="prefetch" href="/assets/js/62.ac7dd70d.js"><link rel="prefetch" href="/assets/js/63.1f724cb5.js"><link rel="prefetch" href="/assets/js/64.85777ea3.js"><link rel="prefetch" href="/assets/js/65.270d5490.js"><link rel="prefetch" href="/assets/js/66.1c5e2582.js"><link rel="prefetch" href="/assets/js/67.87624fec.js"><link rel="prefetch" href="/assets/js/68.aca2d12f.js"><link rel="prefetch" href="/assets/js/69.a714dcd7.js"><link rel="prefetch" href="/assets/js/7.49f43c50.js"><link rel="prefetch" href="/assets/js/8.687ec09d.js"><link rel="prefetch" href="/assets/js/9.0a3f6f96.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/js-js00.html" class="sidebar-link">JS基础</a></li><li><a href="/frontend/js-js01.html" class="sidebar-link">语音合成</a></li><li><a href="/frontend/js-js02.html" class="sidebar-link">JS循环优化</a></li><li><a href="/frontend/js-js03.html" class="sidebar-link">JS前端手写源码</a></li><li><a href="/frontend/js-js04.html" class="sidebar-link">JS前端实现十大经典排序算法</a></li><li><a href="/frontend/js-js05.html" class="sidebar-link">一些优秀的工具函数</a></li><li><a href="/frontend/js-reduce的使用技巧.html" class="sidebar-link">reduce的使用技巧</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/css-css01.html" class="sidebar-link">css大法</a></li><li><a href="/frontend/css-css02.html" class="sidebar-link">css小技巧</a></li><li><a href="/frontend/css-css03.html" class="sidebar-link">css冷门技巧</a></li><li><a href="/frontend/css-css04.html" class="sidebar-link">你不知道的CSS</a></li><li><a href="/frontend/css-css基础.html" class="sidebar-link">css基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/react-react01.html" class="sidebar-link">react的相关知识点</a></li><li><a href="/frontend/react-style-jsx.html" class="sidebar-link">styled-jsx在 jsx 中得应用</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/vue-vue01.html" class="sidebar-link">vue源码学习笔记01</a></li><li><a href="/frontend/vue-vue02.html" class="sidebar-link">vue 函数节流和防抖</a></li><li><a href="/frontend/vue-vue03.html" class="sidebar-link">vue 使用得一些小技巧</a></li><li><a href="/frontend/vue-vue04.html" class="sidebar-link">vue 相关面试题</a></li><li><a href="/frontend/vue-vue05.html" class="sidebar-link">vue-cli3项目 升级到 vue-cli4</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>工具</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/tool-rollup01.html" class="sidebar-link">rollupJs 打包工具</a></li><li><a href="/frontend/tool-performance.html" class="sidebar-link">performance性能调试工具</a></li><li><a href="/frontend/tool-npm.html" class="sidebar-link">用npm打造超溜的前端工作流</a></li><li><a href="/frontend/tool-mui.html" class="sidebar-link">muiJS</a></li><li><a href="/frontend/tool-eslint.html" class="sidebar-link">eslint</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/advanced-单例模式.html" class="active sidebar-link">单例模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/advanced-单例模式.html#何为单例模式" class="sidebar-link">何为单例模式</a></li><li class="sidebar-sub-header"><a href="/frontend/advanced-单例模式.html#单例模式的实现" class="sidebar-link">单例模式的实现</a></li><li class="sidebar-sub-header"><a href="/frontend/advanced-单例模式.html#单例模式的应用" class="sidebar-link">单例模式的应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/advanced-单例模式.html#理解vuex-中的-store" class="sidebar-link">理解Vuex 中的 store</a></li><li class="sidebar-sub-header"><a href="/frontend/advanced-单例模式.html#vuex-如何确保store-的唯一性" class="sidebar-link">Vuex 如何确保Store 的唯一性</a></li></ul></li></ul></li><li><a href="/frontend/advanced-装饰器模式.html" class="sidebar-link">装饰器模式</a></li><li><a href="/frontend/advanced-浏览器事件.html" class="sidebar-link">浏览器事件</a></li><li><a href="/frontend/advanced-虚拟Dom.html" class="sidebar-link">虚拟DOM简析</a></li><li><a href="/frontend/advanced-call,apply以及bind的使用与区别.html" class="sidebar-link">call,apply及bind得使用与区别</a></li><li><a href="/frontend/advanced-性能.html" class="sidebar-link">性能检测及加载优化</a></li><li><a href="/frontend/advanced-函数妙用.html" class="sidebar-link">高级函数</a></li><li><a href="/frontend/advanced-防篡改对象.html" class="sidebar-link">防篡改对象</a></li><li><a href="/frontend/advanced-前端监控.html" class="sidebar-link">监控</a></li><li><a href="/frontend/advanced-前端埋点.html" class="sidebar-link">前端监控与埋点</a></li><li><a href="/frontend/advanced-dailyquestion.html" class="sidebar-link">面试题</a></li><li><a href="/frontend/advanced-web前端面试题.html" class="sidebar-link">刷面试</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="何为单例模式"><a href="#何为单例模式" class="header-anchor">#</a> 何为单例模式</h2> <p>保证一个类仅有一个实例，并提供一个访问它的全局访问点，这样的模式就叫做单例模式</p> <h2 id="单例模式的实现"><a href="#单例模式的实现" class="header-anchor">#</a> 单例模式的实现</h2> <p>问题：如何才能保证一个类仅有一个实例</p> <p>一般情况下，当我们创建了一个类（本质是构造函数），可以通过  <code>new</code> 关键字调用构造函数进而生成任无数个实例对象。比如下面的类：</p> <div class="language-javascipt extra-class"><pre class="language-text"><code>
+class SingleDog {
+	
+	show(){
+		console.log('我是一个单身狗')
+	}
+
+}
+
+
+const s1 = new SingleDog()
+const s2 = new SingleDong()
+
+s1 === s2		// false
+
+可以看到 s1 和 s2 是两个实例，类似这种 先 new 了一个 s1，又new 了一个 s2 ,很明显 s1 和 s2 之前除了构造器韩式是同一个，没有其它任何瓜葛，两者是相互独立的对象，各占一款内存空间
+</code></pre></div><p>显然上面的 做法不是单例模式，而单例模式想要实现的是是：<strong>不管尝试去创建多少次，它都只会给你返回第一次所创建的实例（并且也是微医的一个实例）</strong></p> <p>所有要做到这一点，就需要 构造函数  <strong>具备判断自己是否已经创建过一个实例</strong>的能力。我们仙子啊吧这段判断逻辑携程一个静态方法（其实也可以直接写入构造函数的函数体里）：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">SingleDog</span> <span class="token punctuation">{</span>
+    
+    <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是一个单身狗'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">static</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 判断是否已经new 过 一个实例</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>SingleDog<span class="token punctuation">.</span>instance<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">// 若这个微医的实例不存在，那么先创建它</span>
+            SingleDog<span class="token punctuation">.</span>instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleDog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 如果这个唯一的实例 已经存在，则直接返回 这个实例</span>
+        <span class="token keyword">return</span> SingleDog<span class="token punctuation">.</span>instance
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> s1 <span class="token operator">=</span>  SingleDog<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> s2 <span class="token operator">=</span>  SingleDog<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+s1 <span class="token operator">===</span> s2		<span class="token comment">// true</span>
+</code></pre></div><p>除了楼上实现方式外，getInstance 的逻辑还可以用闭包来实现：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+SingleDog<span class="token punctuation">.</span>getInstance <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 定义自由变量 instance  模拟私有变量</span>
+    <span class="token keyword">let</span> instance <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 判断自由变量是否为 null</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>instance<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">// 如果 为 null 则 new 出唯一实例</span>
+            instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SingleDog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> instance
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>可以看出，在 getInstance 方法的 判断和拦截下，不管调用多少次，SingleDog 都只会返回一个实例。</p> <h2 id="单例模式的应用"><a href="#单例模式的应用" class="header-anchor">#</a> 单例模式的应用</h2> <p>近年来，基于 <code>Flux</code>架构的状态管理工具层出不穷，其中应用最广泛的要输 <code>Redux</code>和 <code>Vuex</code>。无论是 <code>Redux</code>和<code>Vuex</code>,它们都实现了一个全局的 Store 用于存储应用的所有状态，这个Store的实现，正式单例模式的典型应用。这里以 Vuex 为例，研究下 单例模式是怎么发光发热的</p> <h3 id="理解vuex-中的-store"><a href="#理解vuex-中的-store" class="header-anchor">#</a> 理解Vuex 中的 store</h3> <p>:::info</p> <p>Vuex 使用单一状态树，用一个对象就包含了全部的应用层级状态。至此他便作为一个“唯一数据源（SSOT）”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接的定位任一特定的状态片段，在调试的过程中也能轻易的取得整个应用状态的快照。</p> <p>------ Vuex官方文档</p> <p>:::</p> <p>在 Vue 中，组件之间是独立的，组件间的通信最常用的办法是通过 props 属性传递（限于父子组件），稍微复杂点的（比如兄弟组件）需要通过简单的事件监听或者 eventBus 来解决。</p> <p>但当组件非常多，组件关系复杂，且嵌套层次很深的时候，这种原始的通信方式会使我们的逻辑边得复杂难以维护，这时最好的做法就是将共享的数据抽出来、放在全局、供组件门按照一定的规则去存取数据，保证状态以一种可预测的方式发生变化。于是便有了 Vuex,这个用来存放共享数据的唯一数据源就是 Store.</p> <p>所以 在 Vue 实例中，一个Vue实例只能有一个 Vuex,即 一个Vue实例只能对应一个 Store。</p> <h3 id="vuex-如何确保store-的唯一性"><a href="#vuex-如何确保store-的唯一性" class="header-anchor">#</a> Vuex 如何确保Store 的唯一性</h3> <p>我们先来看看如何在 项目中引入 Vuex</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 安装vuex 插件</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token comment">// 将store 注入到Vue 实例中</span>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">el</span><span class="token operator">:</span><span class="token string">'#app'</span><span class="token punctuation">,</span>
+    store
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>通过调用 <code>Vue.use()</code> 方法，安装了Vuex插件，Vuex插件是一个对象，它在内部实现了一个<code>install</code>方法，这个方法会在插件安装的时候被调用，从而把 Store 注入到Vue 实例中去，也就是说 每  install 一次，都会尝试给Vue 实例注入一个 Store</p> <p>在 install 方法里，有一段逻辑和我们楼上的 <code>getInstance</code> 非常相似的逻辑：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> Vue	<span class="token comment">// 这个 Vue 的作用和楼上的 instance 作用一样</span>
+<span class="token operator">...</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">install</span><span class="token punctuation">(</span><span class="token parameter">_Vue</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 判断传入的Vue实例对象是否已经被install过 Vuex 插件（是否有了唯一的state）</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>Vue <span class="token operator">&amp;&amp;</span> _Vue <span class="token operator">===</span> Vue<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'[vuex] already installed.Vue.use(Vuex) should be called only once.'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> 
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 若没有，则为这个Vue实例对象 install 一个唯一的 Vuex</span>
+    Vue <span class="token operator">=</span> _Vue
+    <span class="token comment">// 将Vuex 的初始化逻辑写进 Vue 的钩子函数里</span>
+    <span class="token function">applyMinxin</span><span class="token punctuation">(</span>Vue<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>楼上便是 Vuex 源码中单例模式的实现办法了，套路可以说和我们的 <code>getInstance</code> 如出一辙。通过这种方式，可以保证一个Vue实例（即一个Vue应用）只会被 install 一次 Vuex 插件，所以每个 Vue 实例只会拥有一个全局的 Store.</p> <p>单例模式除了在 Vuex 中大展身手，我们在 Redux 、jQuery 等许多优秀的前端库里也都能看到单例模式的身影。</p> <!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2/21/2022, 3:29:09 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontend/tool-eslint.html" class="prev">
+        eslint
+      </a></span> <span class="next"><a href="/frontend/advanced-装饰器模式.html">
+        装饰器模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.54364397.js" defer></script><script src="/assets/js/2.ea1d54eb.js" defer></script><script src="/assets/js/37.7608c3f2.js" defer></script>
+  </body>
+</html>

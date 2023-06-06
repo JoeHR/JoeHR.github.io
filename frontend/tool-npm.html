@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>why npm script? | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.54364397.js" as="script"><link rel="preload" href="/assets/js/2.ea1d54eb.js" as="script"><link rel="preload" href="/assets/js/14.d55c9a2b.js" as="script"><link rel="prefetch" href="/assets/js/10.a13ce92a.js"><link rel="prefetch" href="/assets/js/11.c5493f60.js"><link rel="prefetch" href="/assets/js/12.0341abb4.js"><link rel="prefetch" href="/assets/js/13.ecaa558e.js"><link rel="prefetch" href="/assets/js/15.b24cd0ee.js"><link rel="prefetch" href="/assets/js/16.7c38e7c7.js"><link rel="prefetch" href="/assets/js/17.fd15e051.js"><link rel="prefetch" href="/assets/js/18.a3beb2d7.js"><link rel="prefetch" href="/assets/js/19.4f970c5e.js"><link rel="prefetch" href="/assets/js/20.35661968.js"><link rel="prefetch" href="/assets/js/21.ec64587c.js"><link rel="prefetch" href="/assets/js/22.6e07b501.js"><link rel="prefetch" href="/assets/js/23.ba36c783.js"><link rel="prefetch" href="/assets/js/24.b6707acb.js"><link rel="prefetch" href="/assets/js/25.2dbfa4d5.js"><link rel="prefetch" href="/assets/js/26.03e28b6f.js"><link rel="prefetch" href="/assets/js/27.fd4a5887.js"><link rel="prefetch" href="/assets/js/28.364e737b.js"><link rel="prefetch" href="/assets/js/29.29942848.js"><link rel="prefetch" href="/assets/js/3.c931e90d.js"><link rel="prefetch" href="/assets/js/30.9185c6d1.js"><link rel="prefetch" href="/assets/js/31.a35eac1d.js"><link rel="prefetch" href="/assets/js/32.8096a1e0.js"><link rel="prefetch" href="/assets/js/33.407a449d.js"><link rel="prefetch" href="/assets/js/34.e2f81dbb.js"><link rel="prefetch" href="/assets/js/35.028c502e.js"><link rel="prefetch" href="/assets/js/36.2de3185a.js"><link rel="prefetch" href="/assets/js/37.7608c3f2.js"><link rel="prefetch" href="/assets/js/38.20651de8.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.9cbc8b55.js"><link rel="prefetch" href="/assets/js/40.4be51e8d.js"><link rel="prefetch" href="/assets/js/41.36a2e3f0.js"><link rel="prefetch" href="/assets/js/42.2cbf9afa.js"><link rel="prefetch" href="/assets/js/43.ce1c8073.js"><link rel="prefetch" href="/assets/js/44.b494f3f7.js"><link rel="prefetch" href="/assets/js/45.34035be8.js"><link rel="prefetch" href="/assets/js/46.ed534a1d.js"><link rel="prefetch" href="/assets/js/47.64e976a5.js"><link rel="prefetch" href="/assets/js/48.e197e0d5.js"><link rel="prefetch" href="/assets/js/49.f76dee05.js"><link rel="prefetch" href="/assets/js/5.1508cebe.js"><link rel="prefetch" href="/assets/js/50.ac9a636f.js"><link rel="prefetch" href="/assets/js/51.d924871e.js"><link rel="prefetch" href="/assets/js/52.388f4e26.js"><link rel="prefetch" href="/assets/js/53.f60541dc.js"><link rel="prefetch" href="/assets/js/54.f37be02d.js"><link rel="prefetch" href="/assets/js/55.06e6ce80.js"><link rel="prefetch" href="/assets/js/56.5f19dd4d.js"><link rel="prefetch" href="/assets/js/57.9398ec97.js"><link rel="prefetch" href="/assets/js/58.503e48ce.js"><link rel="prefetch" href="/assets/js/59.35603c7d.js"><link rel="prefetch" href="/assets/js/6.3c902562.js"><link rel="prefetch" href="/assets/js/60.f34179ae.js"><link rel="prefetch" href="/assets/js/61.c16de7a0.js"><link rel="prefetch" href="/assets/js/62.ac7dd70d.js"><link rel="prefetch" href="/assets/js/63.1f724cb5.js"><link rel="prefetch" href="/assets/js/64.85777ea3.js"><link rel="prefetch" href="/assets/js/65.270d5490.js"><link rel="prefetch" href="/assets/js/66.1c5e2582.js"><link rel="prefetch" href="/assets/js/67.87624fec.js"><link rel="prefetch" href="/assets/js/68.aca2d12f.js"><link rel="prefetch" href="/assets/js/69.a714dcd7.js"><link rel="prefetch" href="/assets/js/7.49f43c50.js"><link rel="prefetch" href="/assets/js/8.687ec09d.js"><link rel="prefetch" href="/assets/js/9.0a3f6f96.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/js-js00.html" class="sidebar-link">JS基础</a></li><li><a href="/frontend/js-js01.html" class="sidebar-link">语音合成</a></li><li><a href="/frontend/js-js02.html" class="sidebar-link">JS循环优化</a></li><li><a href="/frontend/js-js03.html" class="sidebar-link">JS前端手写源码</a></li><li><a href="/frontend/js-js04.html" class="sidebar-link">JS前端实现十大经典排序算法</a></li><li><a href="/frontend/js-js05.html" class="sidebar-link">一些优秀的工具函数</a></li><li><a href="/frontend/js-reduce的使用技巧.html" class="sidebar-link">reduce的使用技巧</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/css-css01.html" class="sidebar-link">css大法</a></li><li><a href="/frontend/css-css02.html" class="sidebar-link">css小技巧</a></li><li><a href="/frontend/css-css03.html" class="sidebar-link">css冷门技巧</a></li><li><a href="/frontend/css-css04.html" class="sidebar-link">你不知道的CSS</a></li><li><a href="/frontend/css-css基础.html" class="sidebar-link">css基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/react-react01.html" class="sidebar-link">react的相关知识点</a></li><li><a href="/frontend/react-style-jsx.html" class="sidebar-link">styled-jsx在 jsx 中得应用</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/vue-vue01.html" class="sidebar-link">vue源码学习笔记01</a></li><li><a href="/frontend/vue-vue02.html" class="sidebar-link">vue 函数节流和防抖</a></li><li><a href="/frontend/vue-vue03.html" class="sidebar-link">vue 使用得一些小技巧</a></li><li><a href="/frontend/vue-vue04.html" class="sidebar-link">vue 相关面试题</a></li><li><a href="/frontend/vue-vue05.html" class="sidebar-link">vue-cli3项目 升级到 vue-cli4</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>工具</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/tool-rollup01.html" class="sidebar-link">rollupJs 打包工具</a></li><li><a href="/frontend/tool-performance.html" class="sidebar-link">performance性能调试工具</a></li><li><a href="/frontend/tool-npm.html" aria-current="page" class="active sidebar-link">用npm打造超溜的前端工作流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#初识-npm-script" class="sidebar-link">初识 npm script</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#用-npm-init-快速创建项目" class="sidebar-link">用 npm init 快速创建项目</a></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#用-npm-run-执行任意命令" class="sidebar-link">用 npm run 执行任意命令</a></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#创建自定义-npm-script" class="sidebar-link">创建自定义 npm script</a></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#添加-eslint-命令" class="sidebar-link">添加 eslint 命令</a></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#运行-eslint-命令" class="sidebar-link">运行 eslint 命令</a></li></ul></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#运行-多个-npm-script" class="sidebar-link">运行 多个 npm script</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#让多个命令-串行" class="sidebar-link">让多个命令 串行？</a></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#npm-run-all" class="sidebar-link">npm-run-all</a></li></ul></li><li class="sidebar-sub-header"><a href="/frontend/tool-npm.html#参数和注释" class="sidebar-link">参数和注释</a></li></ul></li><li><a href="/frontend/tool-mui.html" class="sidebar-link">muiJS</a></li><li><a href="/frontend/tool-eslint.html" class="sidebar-link">eslint</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/advanced-单例模式.html" class="sidebar-link">单例模式</a></li><li><a href="/frontend/advanced-装饰器模式.html" class="sidebar-link">装饰器模式</a></li><li><a href="/frontend/advanced-浏览器事件.html" class="sidebar-link">浏览器事件</a></li><li><a href="/frontend/advanced-虚拟Dom.html" class="sidebar-link">虚拟DOM简析</a></li><li><a href="/frontend/advanced-call,apply以及bind的使用与区别.html" class="sidebar-link">call,apply及bind得使用与区别</a></li><li><a href="/frontend/advanced-性能.html" class="sidebar-link">性能检测及加载优化</a></li><li><a href="/frontend/advanced-函数妙用.html" class="sidebar-link">高级函数</a></li><li><a href="/frontend/advanced-防篡改对象.html" class="sidebar-link">防篡改对象</a></li><li><a href="/frontend/advanced-前端监控.html" class="sidebar-link">监控</a></li><li><a href="/frontend/advanced-前端埋点.html" class="sidebar-link">前端监控与埋点</a></li><li><a href="/frontend/advanced-dailyquestion.html" class="sidebar-link">面试题</a></li><li><a href="/frontend/advanced-web前端面试题.html" class="sidebar-link">刷面试</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="why-npm-script"><a href="#why-npm-script" class="header-anchor">#</a> why npm script?</h1> <p>npm script 相比 grunt、gulp 之类的构建工具简单很多，因为它消除了这些构建工具所带来的抽象层，并带给我们更大的自由度。随着社区的发展，各种基础工具你都可以信手拈来，只要你会使用 <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npmjs.com<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 去搜索，或者去 <a href="https://libraries.io/" target="_blank" rel="noopener noreferrer">libraries.io<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 上搜索。</p> <h2 id="初识-npm-script"><a href="#初识-npm-script" class="header-anchor">#</a> 初识 npm script</h2> <h3 id="用-npm-init-快速创建项目"><a href="#用-npm-init-快速创建项目" class="header-anchor">#</a> 用 npm init 快速创建项目</h3> <p>开始探索 npm script 之前，我们先聊聊这些 scripts 所依赖的文件 package.json，以它为基础的 npm 则是 node.js 社区蓬勃发展的顶梁柱。</p> <p>npm 为我们提供了快速创建 package.json 文件的命令 npm init，执行该命令会问几个基本问题，如包名称、版本号、作者信息、入口文件、仓库地址、许可协议等，多数问题已经提供了默认值，你可以在问题后敲回车接受默认值：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> init
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// package.json</span>
+
+<span class="token keyword">package</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token punctuation">(</span>hello<span class="token operator">-</span>npm<span class="token operator">-</span>script<span class="token punctuation">)</span>
+<span class="token literal-property property">version</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token number">0.1</span><span class="token number">.0</span><span class="token punctuation">)</span>
+<span class="token literal-property property">description</span><span class="token operator">:</span> hello npm script
+entry point<span class="token operator">:</span> <span class="token punctuation">(</span>index<span class="token punctuation">.</span>js<span class="token punctuation">)</span>
+test command<span class="token operator">:</span>
+git repository<span class="token operator">:</span>
+<span class="token literal-property property">keywords</span><span class="token operator">:</span> npm<span class="token punctuation">,</span> script
+<span class="token literal-property property">license</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token constant">MIT</span><span class="token punctuation">)</span>
+</code></pre></div><p>按回车确认就能把package.json 的内容写到文件系统，如果要修改 package.json，可以直接用编辑器编辑，或者再次运行 npm init，npm 默认不会覆盖修改里面已经存在的信息。</p> <blockquote><p><strong>TIP#1</strong>: 嫌上面的初始化方式太啰嗦？你可以使用 npm init -f（意指 --force，或者使用 --yes）告诉 npm 直接跳过参数问答环节，快速生成 package.json。</p></blockquote> <p><code>npm init</code> 初始化出来的package.json 文件内容是可以 通过命令去修改默认配置的</p> <div class="language- extra-class"><pre class="language-text"><code>npm config set init.author.email &quot;qiaoxinhen@sina.com&quot;
+npm config set init.author.name &quot;rh&quot;
+npm config set init.author.url &quot;http://github.com/rh&quot;
+npm config set init.license &quot;MIT&quot;
+npm config set init.version &quot;0.1.0&quot;
+</code></pre></div><h3 id="用-npm-run-执行任意命令"><a href="#用-npm-run-执行任意命令" class="header-anchor">#</a> 用 npm run 执行任意命令</h3> <p>使用 npm init 创建的 package.json 文件中包含了 scripts 字段：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>在终端中运行 npm run test，能看到 Error: no test specified 的输出。npm run test 可以简写为 npm test，或更简单的 npm t，得到的结果是几乎相同的。</p> <p>和 test 类似，start 也是 npm 内置支持的命令，但是需要先在 scripts 字段中声明该脚本的实际内容，如果没声明就执行 npm start，会直接报错。如下图所示：</p> <div class="language-shell extra-class"><pre class="language-shell"><code> Joe@JOERH  F:<span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span>demo1  <span class="token function">npm</span> t
+
+<span class="token operator">&gt;</span> demo1@1.0.0 <span class="token builtin class-name">test</span> F:<span class="token punctuation">\</span>myfiles<span class="token punctuation">\</span>学习<span class="token punctuation">\</span>study_workspace<span class="token punctuation">\</span>npmscripts<span class="token punctuation">\</span>demo1
+<span class="token operator">&gt;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Error: no test specified&quot;</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+
+<span class="token string">&quot;Error: no test specified&quot;</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Test failed.  See above <span class="token keyword">for</span> <span class="token function">more</span> details.
+ Joe@JOERH  F:<span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span>demo1  <span class="token function">npm</span> start
+<span class="token function">npm</span> ERR<span class="token operator">!</span> missing script: start
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> A complete log of this run can be found in:
+<span class="token function">npm</span> ERR<span class="token operator">!</span>     C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>Joe<span class="token punctuation">\</span>AppData<span class="token punctuation">\</span>Roaming<span class="token punctuation">\</span>npm-cache<span class="token punctuation">\</span>_logs<span class="token punctuation">\</span><span class="token number">2019</span>-12-04T05_44_20_043Z-debug.log
+ Joe@JOERH  F:<span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span><span class="token punctuation">..</span><span class="token punctuation">\</span>demo1  
+</code></pre></div><p>那么，npm 是如何管理和执行各种 scripts 的呢？作为 npm 内置的核心功能之一，npm run 实际上是 npm run-script 命令的简写。当我们运行 npm run xxx 时，基本步骤如下：</p> <ol><li>从 package.json 文件中读取 scripts 对象里面的全部配置；</li> <li>以传给 npm run 的第一个参数作为键，本例中为 xxx，在 scripts 对象里面获取对应的值作为接下来要执行的命令，如果没找到直接报错；</li> <li>在系统默认的 shell 中执行上述命令，系统默认 shell 通常是 bash，windows 环境下可能略有不同，稍后再讲。</li></ol> <p>如果不带任何参数执行 npm run，它会列出可执行的所有命令，比如下面这样：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>Available scripts <span class="token keyword">in</span> the myproject package:
+  eslint
+    eslint **.js
+</code></pre></div><p>如果运行 npm run eslint，npm 会在 shell 中运行 eslint **.js。</p> <p>有没有好奇过上面的 eslint 命令是从哪里来的？其实，npm 在执行指定 script 之前会把 node_modules/.bin 加到环境变量 $PATH 的前面，这意味着任何内含可执行文件的 npm 依赖都可以在 npm script 中直接调用，换句话说，你不需要在 npm script 中加上可执行文件的完整路径，比如 <code>./node_modules/.bin/eslint **.js</code>。</p> <p><img src="/assets/img/npmscript-01-01.a7ebbef1.png" alt="1575438630539"></p> <h3 id="创建自定义-npm-script"><a href="#创建自定义-npm-script" class="header-anchor">#</a> 创建自定义 npm script</h3> <p>以 eslint 为例</p> <p>再新项目或者任何现有的项目中添加 eslint 自定义脚本的步骤如下</p> <ul><li>准备被检查的代码</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'some value'</span>
+
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'some log'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>添加 eslint 依赖</li></ul> <p>执行安装将 eslint 添加位 devDependencies:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i <span class="token parameter variable">-D</span> eslint
+</code></pre></div><ul><li>初始化 eslint 配置</li></ul> <p>用 eslint 做检查需要配置规则集，存放规则集的文件就是配置文件，使用如下文件生成配置文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>npx eslint <span class="token parameter variable">--init</span>
+</code></pre></div><blockquote><p><strong>TIP#3</strong>: 把 eslint 安装为项目依赖而非全局命令，项目可移植性更高。</p></blockquote> <p>在命令行提示中选择 Answer questions about your style，如下图回答几个问题，答案可以根据自己的偏好：</p> <p><img src="/assets/img/npmscript-01-02.fc1fc8e4.png" alt="1575439521810"></p> <p>回车后根目录下就有了 .eslintrc.js 配置文件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'env'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'browser'</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'es6'</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string-property property">'extends'</span><span class="token operator">:</span> <span class="token string">'eslint:recommended'</span><span class="token punctuation">,</span>
+    <span class="token string-property property">'globals'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'Atomics'</span><span class="token operator">:</span> <span class="token string">'readonly'</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'SharedArrayBuffer'</span><span class="token operator">:</span> <span class="token string">'readonly'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string-property property">'parserOptions'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'ecmaVersion'</span><span class="token operator">:</span> <span class="token number">2018</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'sourceType'</span><span class="token operator">:</span> <span class="token string">'module'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string-property property">'rules'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'indent'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">'error'</span><span class="token punctuation">,</span>
+            <span class="token number">4</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'linebreak-style'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">'error'</span><span class="token punctuation">,</span>
+            <span class="token string">'windows'</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'quotes'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">'error'</span><span class="token punctuation">,</span>
+            <span class="token string">'single'</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'semi'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">'error'</span><span class="token punctuation">,</span>
+            <span class="token string">'never'</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><h3 id="添加-eslint-命令"><a href="#添加-eslint-命令" class="header-anchor">#</a> 添加 eslint 命令</h3></li></ul> <p>在 package.json 的 scripts 字段中新增命令 eslint：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;eslint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint --ext .js src&quot;</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>手动修改 package.json 时一定要注意语法正确。</strong></p> <ul><li><h3 id="运行-eslint-命令"><a href="#运行-eslint-命令" class="header-anchor">#</a> 运行 eslint 命令</h3></li></ul> <p>执行 npm run eslint，可以看到，按照官方推荐规则代码里有 3 处不符合规范的地方：</p> <p><img src="/assets/img/npmscript-01-03.7544323b.png" alt="1575439882702"></p> <h2 id="运行-多个-npm-script"><a href="#运行-多个-npm-script" class="header-anchor">#</a> 运行 多个 npm script</h2> <p>现在有一个 前端项目 包含有 js、css、less、scss、json、markdown 等格式的文件， 为保障代码质量，给不同的代码添加检查是很有必要的，代码检查不仅保障代码没有低级的语法错误，还可确保代码都遵守社区的最佳实践和一致的编码风格，在团队协作中尤其有用，即使是个人项目，加上代码检查，也会提高你的效率和质量。</p> <p>通常会给前端项目加上下面4种代码检查</p> <ul><li><p>eslint ：可定制的 js 代码检查</p></li> <li><p>stylelint ：可定制的样式文件检查，支持 css、less、scss</p></li> <li><p>jsonlint ： json文件语法检查</p></li> <li><p>markdownlint-cli ： markdown文件检查</p></li></ul> <p>需要注意的是，html 代码也应该检查，但是工具支持薄弱，就略过不表。此外，为代码添加必要的单元测试也是质量保障的重要手段，常用的单测技术栈是：</p> <ul><li><a href="https://mochajs.org/" target="_blank" rel="noopener noreferrer">mocha<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，测试用例组织，测试用例运行和结果收集的框架；</li> <li><a href="http://chaijs.com/" target="_blank" rel="noopener noreferrer">chai<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，测试断言库，必要的时候可以结合 <a href="http://sinonjs.org/" target="_blank" rel="noopener noreferrer">sinon<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 使用；</li></ul> <h3 id="让多个命令-串行"><a href="#让多个命令-串行" class="header-anchor">#</a> 让多个命令 串行？</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// package.json</span>
+
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;demo2&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;lint:js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint --ext .js src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:css&quot;</span><span class="token operator">:</span> <span class="token string">&quot;stylelint .css src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:json&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jsonlint --quite false src/test.json&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:markdown&quot;</span><span class="token operator">:</span> <span class="token string">&quot;markdownlint --config .markdownlint.json .md src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mocha --require @babel/register&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run lint:js &amp;&amp; npm run lint:css &amp;&amp; npm run lint:json &amp;&amp; npm run lint:markdown &amp;&amp; npm run mocha&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;@babel/core&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.7.4&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@babel/node&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.7.4&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@babel/preset-env&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.7.4&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@babel/register&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.7.4&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;chai&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;eslint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.7.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;jsonlint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;latest&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;markdownlint-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;latest&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.2.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;stylelint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^12.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;stylelint-config-standard&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^19.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;stylelint-scss&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.13.0&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>运行 npm t 命令、</p> <div class="language- extra-class"><pre class="language-text"><code> Joe@JOERH  F:\..\..\..\..\demo2  npm t
+
+&gt; demo2@1.0.0 test F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; npm run lint:js &amp;&amp; npm run lint:css &amp;&amp; npm run lint:json &amp;&amp; npm run lint:markdown &amp;&amp; npm run mocha
+
+
+&gt; demo2@1.0.0 lint:js F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; eslint --ext .js src
+
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2&gt;&quot;node&quot;  &quot;F:\myfiles\学习\study_workspace\npmscripts\demo2\node_modules\.bin\\..\_eslint@6.7.2@eslint\bin\eslint.js&quot; --ext .js src
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2\src\index.js
+  2:7   error  'str' is assigned a value but never used  no-unused-vars
+  4:10  error  'fn' is defined but never used            no-unused-vars
+  9:1   error  'module' is not defined                   no-undef
+
+✖ 3 problems (3 errors, 0 warnings)
+
+
+&gt; demo2@1.0.0 lint:css F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; stylelint .css src
+
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2&gt;&quot;node&quot;  &quot;F:\myfiles\学习\study_workspace\npmscripts\demo2\node_modules\.bin\\..\_stylelint@12.0.0@stylelint\bin\stylelint.js&quot; .css src
+
+src/index.scss
+ 8:5  ×  Unknown word   CssSyntaxError
+
+
+&gt; demo2@1.0.0 lint:json F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; jsonlint --quite false src/test.json
+
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2&gt;&quot;node&quot;  &quot;F:\myfiles\学习\study_workspace\npmscripts\demo2\node_modules\.bin\\..\_jsonlint@1.6.3@jsonlint\lib\cli.js&quot; --quite false src/test.json
+{
+  &quot;name&quot;: &quot;122&quot;,
+  &quot;age&quot;: &quot;21&quot;
+}
+
+&gt; demo2@1.0.0 lint:markdown F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; markdownlint --config .markdownlint.json .md src
+
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2&gt;&quot;node&quot;  &quot;F:\myfiles\学习\study_workspace\npmscripts\demo2\node_modules\.bin\\..\_markdownlint-cli@0.19.0@markdownlint-cli\markdownlint.js&quot; --config .markdownlint.json .md src
+Cannot read or parse config file .markdownlint.json: ENOENT: no such file or directory, open '.markdownlint.json'
+src/test.md:1 MD041/first-line-heading/first-line-h1 First line in file should be a top level heading [Context: &quot;## Introduction&quot;]
+src/test.md:3 MD013/line-length Line length [Expected: 80; Actual: 265]
+src/test.md:6 MD001/heading-increment/header-increment Heading levels should only increment by one level at a time [Expected: h3; Actual: h4]    
+src/test.md:8 MD013/line-length Line length [Expected: 80; Actual: 118]
+src/test.md:9 MD013/line-length Line length [Expected: 80; Actual: 114]
+src/test.md:10 MD013/line-length Line length [Expected: 80; Actual: 108]
+src/test.md:12 MD013/line-length Line length [Expected: 80; Actual: 322]
+src/test.md:23 MD013/line-length Line length [Expected: 80; Actual: 193]
+
+&gt; demo2@1.0.0 mocha F:\myfiles\学习\study_workspace\npmscripts\demo2
+&gt; mocha --require @babel/register
+
+
+F:\myfiles\学习\study_workspace\npmscripts\demo2&gt;&quot;node&quot;  &quot;F:\myfiles\学习\study_workspace\npmscripts\demo2\node_modules\.bin\\..\_mocha@6.2.2@mocha\bin\mocha&quot; --require @babel/register
+
+
+  测试index.js
+before所有的测试用例
+    测试add函数
+在本区块的每个测试用例之前
+      √ 两个参数相加的和
+在本区快的每个测试用例之后
+    测试add函数1
+在本区块的每个测试用例之前
+      √ 两个参数相加的不为和以外的数
+在本区快的每个测试用例之后
+after所有的测试用例
+
+  demo1测试index.js
+before所有的测试用例
+    测试add函数
+在本区块的每个测试用例之前
+      √ 两个参数相加的和
+在本区快的每个测试用例之后
+    测试add函数1
+在本区块的每个测试用例之前
+      √ 两个参数相加的不为和以外的数
+在本区快的每个测试用例之后
+after所有的测试用例
+
+  测试hello.js
+    sayhello
+      √ should say hello
+
+
+  5 passing (236ms)
+
+ Joe@JOERH  F:\..\..\..\..\demo2 
+</code></pre></div><blockquote><p><strong>demo 见 demo2</strong></p></blockquote> <p>需要注意的是，串行执行的时候如果前序命令失败（通常进程退出码非0），后续全部命令都会终止，我们可以尝试在 index.js 中引入错误（删掉行末的分号）：</p> <p>** &amp;&amp; 或 &amp;  都表示串行**，并且从输出</p> <div class="language- extra-class"><pre class="language-text"><code>可以看到子命令的执行顺序是严格按照我们在 scripts 中声明的先后顺序来的：
+
+eslint ==&gt; stylelint ==&gt; jsonlint ==&gt; markdownlint ==&gt; mocha
+</code></pre></div><p>但如果前序命令失败，后续命令会继续运行。</p> <h3 id="npm-run-all"><a href="#npm-run-all" class="header-anchor">#</a> npm-run-all</h3> <p>上面原生方式来运行多条命令很臃肿，可以使用 <font color="red"><code>npm-run-all</code></font>实现更轻量和简洁的多名了运行</p> <p>先执行 安装命令将  <font color="red"><code>npm-run-all</code></font>添加到项目依赖中</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i npm-run-all <span class="token parameter variable">-D</span>
+</code></pre></div><p>然后修改 package.json 实现多命令的串行执行：</p> <div class="language-json extra-class"><pre class="language-json"><code>  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;lint:js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint --ext .js src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:css&quot;</span><span class="token operator">:</span> <span class="token string">&quot;stylelint .css src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:json&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jsonlint --quite false src/test.json&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint:markdown&quot;</span><span class="token operator">:</span> <span class="token string">&quot;markdownlint --config .markdownlint.json .md src&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;mocha --require @babel/register&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;//&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run lint:js &amp;&amp; npm run lint:css &amp;&amp; npm run lint:json &amp;&amp; npm run lint:markdown &amp;&amp; npm run mocha&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm-run-all lint:js lint:css lint:json lint:markdown mocha&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm-run-all lint:* mocha&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="参数和注释"><a href="#参数和注释" class="header-anchor">#</a> 参数和注释</h2> <!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2/21/2022, 3:29:09 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontend/tool-performance.html" class="prev">
+        performance性能调试工具
+      </a></span> <span class="next"><a href="/frontend/tool-mui.html">
+        muiJS
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.54364397.js" defer></script><script src="/assets/js/2.ea1d54eb.js" defer></script><script src="/assets/js/14.d55c9a2b.js" defer></script>
+  </body>
+</html>
