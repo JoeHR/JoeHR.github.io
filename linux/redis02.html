@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>redis 服务相关&amp; 备份恢复 | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.f8839a88.js" as="script"><link rel="preload" href="/assets/js/2.8d06e467.js" as="script"><link rel="preload" href="/assets/js/30.29554d88.js" as="script"><link rel="prefetch" href="/assets/js/10.75500dcd.js"><link rel="prefetch" href="/assets/js/11.592669c1.js"><link rel="prefetch" href="/assets/js/12.a9094538.js"><link rel="prefetch" href="/assets/js/13.2cf414ec.js"><link rel="prefetch" href="/assets/js/14.d2737ceb.js"><link rel="prefetch" href="/assets/js/15.8eb8f805.js"><link rel="prefetch" href="/assets/js/16.820d5c80.js"><link rel="prefetch" href="/assets/js/17.801ecbcc.js"><link rel="prefetch" href="/assets/js/18.b2f69842.js"><link rel="prefetch" href="/assets/js/19.15396bbe.js"><link rel="prefetch" href="/assets/js/20.233b2644.js"><link rel="prefetch" href="/assets/js/21.858bfdd0.js"><link rel="prefetch" href="/assets/js/22.38ba5211.js"><link rel="prefetch" href="/assets/js/23.58fbdc70.js"><link rel="prefetch" href="/assets/js/24.15131ce6.js"><link rel="prefetch" href="/assets/js/25.7bce4e07.js"><link rel="prefetch" href="/assets/js/26.b37e74b8.js"><link rel="prefetch" href="/assets/js/27.64d94c4d.js"><link rel="prefetch" href="/assets/js/28.c78dfbd6.js"><link rel="prefetch" href="/assets/js/29.b576a40d.js"><link rel="prefetch" href="/assets/js/3.f9317427.js"><link rel="prefetch" href="/assets/js/31.9af67186.js"><link rel="prefetch" href="/assets/js/32.d380b09a.js"><link rel="prefetch" href="/assets/js/33.eb0839b0.js"><link rel="prefetch" href="/assets/js/34.62b518b9.js"><link rel="prefetch" href="/assets/js/35.429a5bce.js"><link rel="prefetch" href="/assets/js/36.43c4d349.js"><link rel="prefetch" href="/assets/js/37.d6b42aa3.js"><link rel="prefetch" href="/assets/js/38.a7eec5a0.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.63a5e966.js"><link rel="prefetch" href="/assets/js/40.dc834d41.js"><link rel="prefetch" href="/assets/js/41.fcc4e1e8.js"><link rel="prefetch" href="/assets/js/42.e57f8aa8.js"><link rel="prefetch" href="/assets/js/43.15534ad1.js"><link rel="prefetch" href="/assets/js/44.eb90d815.js"><link rel="prefetch" href="/assets/js/45.6e206fc8.js"><link rel="prefetch" href="/assets/js/46.285350f5.js"><link rel="prefetch" href="/assets/js/47.cde65c12.js"><link rel="prefetch" href="/assets/js/48.1c870c67.js"><link rel="prefetch" href="/assets/js/49.2b6f4336.js"><link rel="prefetch" href="/assets/js/5.2c45f22c.js"><link rel="prefetch" href="/assets/js/50.1a667582.js"><link rel="prefetch" href="/assets/js/51.600bc042.js"><link rel="prefetch" href="/assets/js/52.2e105d94.js"><link rel="prefetch" href="/assets/js/53.fa0284c4.js"><link rel="prefetch" href="/assets/js/54.0b748f22.js"><link rel="prefetch" href="/assets/js/55.ee05dee1.js"><link rel="prefetch" href="/assets/js/56.21abdcc3.js"><link rel="prefetch" href="/assets/js/57.26ddbf76.js"><link rel="prefetch" href="/assets/js/58.91fd9800.js"><link rel="prefetch" href="/assets/js/59.6022db72.js"><link rel="prefetch" href="/assets/js/6.e9b45abe.js"><link rel="prefetch" href="/assets/js/60.1f2889ae.js"><link rel="prefetch" href="/assets/js/61.46040c7d.js"><link rel="prefetch" href="/assets/js/62.af7e9fcd.js"><link rel="prefetch" href="/assets/js/63.2fb355ca.js"><link rel="prefetch" href="/assets/js/64.99a87693.js"><link rel="prefetch" href="/assets/js/65.005ae6f4.js"><link rel="prefetch" href="/assets/js/66.12940877.js"><link rel="prefetch" href="/assets/js/67.b4a93190.js"><link rel="prefetch" href="/assets/js/68.c8d9d13c.js"><link rel="prefetch" href="/assets/js/69.158d7968.js"><link rel="prefetch" href="/assets/js/7.bbffe35f.js"><link rel="prefetch" href="/assets/js/70.4e4a3ae3.js"><link rel="prefetch" href="/assets/js/71.487c7568.js"><link rel="prefetch" href="/assets/js/72.e2a65bcb.js"><link rel="prefetch" href="/assets/js/8.bda61152.js"><link rel="prefetch" href="/assets/js/9.f87a0e7d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/linux/" aria-current="page" class="sidebar-link">查看系统命令</a></li><li><a href="/linux/linux01.html" class="sidebar-link">docker入门之安装教程</a></li><li><a href="/linux/linux02.html" class="sidebar-link">ssh密钥方式远程链接linux</a></li><li><a href="/linux/linux03.html" class="sidebar-link">使用Docker,Docker-compose 快速 搭建Gitlab</a></li><li><a href="/linux/docker01.html" class="sidebar-link">docker 常用命令</a></li><li><a href="/linux/mongodb01.html" class="sidebar-link">安装</a></li><li><a href="/linux/mongoose.html" class="sidebar-link">核心概念</a></li><li><a href="/linux/redis.html" class="sidebar-link">redis笔记1</a></li><li><a href="/linux/redis01.html" class="sidebar-link">redis笔记2</a></li><li><a href="/linux/redis02.html" aria-current="page" class="active sidebar-link">redis笔记3</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/redis02.html#redis-服务相关-备份恢复" class="sidebar-link">redis 服务相关&amp; 备份恢复</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="redis-服务相关-备份恢复"><a href="#redis-服务相关-备份恢复" class="header-anchor">#</a> redis 服务相关&amp; 备份恢复</h2> <p><strong>CLIENT LIST</strong>:以人类可读的格式，返回所有连接到服务器的客户端信息和统计数据。</p> <p><img src="/assets/img/redis-04.cd845f1b.png" alt="image-20200413230227760"></p> <p><strong>FLUSHDB</strong>:清空当前数据库中的所有 key。(此命令从不失败)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>redis<span class="token operator">&gt;</span> DBSIZE    <span class="token comment"># 清空前的 key 数量</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">4</span>
+
+redis<span class="token operator">&gt;</span> FLUSHDB
+OK
+
+redis<span class="token operator">&gt;</span> DBSIZE    <span class="token comment"># 清空后的 key 数量</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
+</code></pre></div><p><strong>FLUSHALL</strong>:清空整个 Redis 服务器的数据(删除所有数据库的所有 key )。(此命令从不失败)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>redis<span class="token operator">&gt;</span> DBSIZE            <span class="token comment"># 0 号数据库的 key 数量</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">9</span>
+
+redis<span class="token operator">&gt;</span> SELECT <span class="token number">1</span>          <span class="token comment"># 切换到 1 号数据库</span>
+OK
+
+redis<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> DBSIZE         <span class="token comment"># 1 号数据库的 key 数量</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">6</span>
+
+redis<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> flushall       <span class="token comment"># 清空所有数据库的所有 key</span>
+OK
+
+redis<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> DBSIZE         <span class="token comment"># 不但 1 号数据库被清空了</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
+
+redis<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> SELECT <span class="token number">0</span>       <span class="token comment"># 0 号数据库(以及其他所有数据库)也一样</span>
+OK
+
+redis<span class="token operator">&gt;</span> DBSIZE
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/13/2020, 11:10:28 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/redis01.html" class="prev">
+        redis笔记2
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f8839a88.js" defer></script><script src="/assets/js/2.8d06e467.js" defer></script><script src="/assets/js/30.29554d88.js" defer></script>
+  </body>
+</html>

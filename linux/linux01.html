@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.f8839a88.js" as="script"><link rel="preload" href="/assets/js/2.8d06e467.js" as="script"><link rel="preload" href="/assets/js/59.6022db72.js" as="script"><link rel="prefetch" href="/assets/js/10.75500dcd.js"><link rel="prefetch" href="/assets/js/11.592669c1.js"><link rel="prefetch" href="/assets/js/12.a9094538.js"><link rel="prefetch" href="/assets/js/13.2cf414ec.js"><link rel="prefetch" href="/assets/js/14.d2737ceb.js"><link rel="prefetch" href="/assets/js/15.8eb8f805.js"><link rel="prefetch" href="/assets/js/16.820d5c80.js"><link rel="prefetch" href="/assets/js/17.801ecbcc.js"><link rel="prefetch" href="/assets/js/18.b2f69842.js"><link rel="prefetch" href="/assets/js/19.15396bbe.js"><link rel="prefetch" href="/assets/js/20.233b2644.js"><link rel="prefetch" href="/assets/js/21.858bfdd0.js"><link rel="prefetch" href="/assets/js/22.38ba5211.js"><link rel="prefetch" href="/assets/js/23.58fbdc70.js"><link rel="prefetch" href="/assets/js/24.15131ce6.js"><link rel="prefetch" href="/assets/js/25.7bce4e07.js"><link rel="prefetch" href="/assets/js/26.b37e74b8.js"><link rel="prefetch" href="/assets/js/27.64d94c4d.js"><link rel="prefetch" href="/assets/js/28.c78dfbd6.js"><link rel="prefetch" href="/assets/js/29.b576a40d.js"><link rel="prefetch" href="/assets/js/3.f9317427.js"><link rel="prefetch" href="/assets/js/30.29554d88.js"><link rel="prefetch" href="/assets/js/31.9af67186.js"><link rel="prefetch" href="/assets/js/32.d380b09a.js"><link rel="prefetch" href="/assets/js/33.eb0839b0.js"><link rel="prefetch" href="/assets/js/34.62b518b9.js"><link rel="prefetch" href="/assets/js/35.429a5bce.js"><link rel="prefetch" href="/assets/js/36.43c4d349.js"><link rel="prefetch" href="/assets/js/37.d6b42aa3.js"><link rel="prefetch" href="/assets/js/38.a7eec5a0.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.63a5e966.js"><link rel="prefetch" href="/assets/js/40.dc834d41.js"><link rel="prefetch" href="/assets/js/41.fcc4e1e8.js"><link rel="prefetch" href="/assets/js/42.e57f8aa8.js"><link rel="prefetch" href="/assets/js/43.15534ad1.js"><link rel="prefetch" href="/assets/js/44.eb90d815.js"><link rel="prefetch" href="/assets/js/45.6e206fc8.js"><link rel="prefetch" href="/assets/js/46.285350f5.js"><link rel="prefetch" href="/assets/js/47.cde65c12.js"><link rel="prefetch" href="/assets/js/48.1c870c67.js"><link rel="prefetch" href="/assets/js/49.2b6f4336.js"><link rel="prefetch" href="/assets/js/5.2c45f22c.js"><link rel="prefetch" href="/assets/js/50.1a667582.js"><link rel="prefetch" href="/assets/js/51.600bc042.js"><link rel="prefetch" href="/assets/js/52.2e105d94.js"><link rel="prefetch" href="/assets/js/53.fa0284c4.js"><link rel="prefetch" href="/assets/js/54.0b748f22.js"><link rel="prefetch" href="/assets/js/55.ee05dee1.js"><link rel="prefetch" href="/assets/js/56.21abdcc3.js"><link rel="prefetch" href="/assets/js/57.26ddbf76.js"><link rel="prefetch" href="/assets/js/58.91fd9800.js"><link rel="prefetch" href="/assets/js/6.e9b45abe.js"><link rel="prefetch" href="/assets/js/60.1f2889ae.js"><link rel="prefetch" href="/assets/js/61.46040c7d.js"><link rel="prefetch" href="/assets/js/62.af7e9fcd.js"><link rel="prefetch" href="/assets/js/63.2fb355ca.js"><link rel="prefetch" href="/assets/js/64.99a87693.js"><link rel="prefetch" href="/assets/js/65.005ae6f4.js"><link rel="prefetch" href="/assets/js/66.12940877.js"><link rel="prefetch" href="/assets/js/67.b4a93190.js"><link rel="prefetch" href="/assets/js/68.c8d9d13c.js"><link rel="prefetch" href="/assets/js/69.158d7968.js"><link rel="prefetch" href="/assets/js/7.bbffe35f.js"><link rel="prefetch" href="/assets/js/70.4e4a3ae3.js"><link rel="prefetch" href="/assets/js/71.487c7568.js"><link rel="prefetch" href="/assets/js/72.e2a65bcb.js"><link rel="prefetch" href="/assets/js/8.bda61152.js"><link rel="prefetch" href="/assets/js/9.f87a0e7d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/linux/" aria-current="page" class="sidebar-link">查看系统命令</a></li><li><a href="/linux/linux01.html" aria-current="page" class="active sidebar-link">docker入门之安装教程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux01.html#mac-os上的docker安装方法" class="sidebar-link">Mac OS上的Docker安装方法</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#windows上docker安装" class="sidebar-link">Windows上Docker安装</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#linux上docker安装" class="sidebar-link">Linux上Docker安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux01.html#centos中docker安装方法" class="sidebar-link">Centos中Docker安装方法</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#debian中docker的安装方法" class="sidebar-link">Debian中Docker的安装方法</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#ubuntu中docker安装方法" class="sidebar-link">Ubuntu中Docker安装方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#docker-compose集合命令" class="sidebar-link">Docker-compose集合命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux01.html#docker-compose的简单使用" class="sidebar-link">docker-compose的简单使用</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#docker-compose-yml-文件-属性-详解" class="sidebar-link">docker-compose.yml 文件 属性 详解</a></li></ul></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#docker-仓库" class="sidebar-link">Docker 仓库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/linux01.html#提交镜像" class="sidebar-link">提交镜像</a></li><li class="sidebar-sub-header"><a href="/linux/linux01.html#拉取镜像" class="sidebar-link">拉取镜像</a></li></ul></li></ul></li><li><a href="/linux/linux02.html" class="sidebar-link">ssh密钥方式远程链接linux</a></li><li><a href="/linux/linux03.html" class="sidebar-link">使用Docker,Docker-compose 快速 搭建Gitlab</a></li><li><a href="/linux/docker01.html" class="sidebar-link">docker 常用命令</a></li><li><a href="/linux/mongodb01.html" class="sidebar-link">安装</a></li><li><a href="/linux/mongoose.html" class="sidebar-link">核心概念</a></li><li><a href="/linux/redis.html" class="sidebar-link">redis笔记1</a></li><li><a href="/linux/redis01.html" class="sidebar-link">redis笔记2</a></li><li><a href="/linux/redis02.html" class="sidebar-link">redis笔记3</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>本篇介绍了在Mac OS, Windows, Linux下的Docker安装方法。</p> <p>先来一个官方的介绍：</p> <blockquote><p>Docker Engine is available for Linux (<a href="https://store.docker.com/editions/community/docker-ce-server-centos" target="_blank" rel="noopener noreferrer">CentOS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, <a href="https://store.docker.com/editions/community/docker-ce-server-debian" target="_blank" rel="noopener noreferrer">Debian<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, <a href="https://store.docker.com/editions/community/docker-ce-server-fedora" target="_blank" rel="noopener noreferrer">Fedora<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, <a href="https://store.docker.com/editions/enterprise/docker-ee-server-oraclelinux" target="_blank" rel="noopener noreferrer">Oracle Linux<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, <a href="https://store.docker.com/editions/enterprise/docker-ee-server-rhel" target="_blank" rel="noopener noreferrer">RHEL<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, <a href="https://store.docker.com/editions/enterprise/docker-ee-server-sles" target="_blank" rel="noopener noreferrer">SUSE<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>, and <a href="https://store.docker.com/editions/community/docker-ce-server-ubuntu" target="_blank" rel="noopener noreferrer">Ubuntu<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>) or <a href="https://store.docker.com/editions/enterprise/docker-ee-server-windows" target="_blank" rel="noopener noreferrer">Windows Server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> operating systems and is based on containerd - the open source container runtime project that Docker donated to the Cloud Native Computing Foundation (CNCF) in 2017. It is available as both a free community-supported engine and as a commercially-supported enterprise engine (Docker Engine-Enterprise) that also forms the foundation for an enterprise container platform.</p></blockquote> <p>基本上全平台已经覆盖，英文好的同学，可以自取。</p> <h2 id="mac-os上的docker安装方法"><a href="#mac-os上的docker安装方法" class="header-anchor">#</a> Mac OS上的Docker安装方法</h2> <p><strong>方法一官方<code>dmg</code>：</strong></p> <p>官方下载地址：</p> <p><a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac" target="_blank" rel="noopener noreferrer">Docker Descktop for Mac<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>对系统的要求：</p> <blockquote><p>Requires Apple Mac OS Sierra 10.12 or above. Download <a href="https://docs.docker.com/toolbox/overview/" target="_blank" rel="noopener noreferrer">Docker Toolbox<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> for previous OS versions.</p></blockquote> <p>只要系统是 Mac OS Sierra 10.12以上即可。</p> <p>下载完<code>Docker.dmg</code>安装包之后，双击即可以安装，可能需要系统管理员权限，输入密码即可。</p> <p>运行过后，小图标：</p> <p><a href="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-install.png?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" target="_blank" rel="noopener noreferrer"><img src="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-install.png?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" alt="图片裂了，联系：lw96@live.com">Mac上Docker安装运行之后<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>安装完之后，在终端工具中，使用<code>docker version</code>来查看Docker版本。</p> <p><a href="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-version.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" target="_blank" rel="noopener noreferrer"><img src="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-version.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" alt="图片裂了，联系：lw96@live.com">docker版本<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>设置中国区加速地址：</p> <p><a href="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-acc.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" target="_blank" rel="noopener noreferrer"><img src="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/docker-acc.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" alt="图片裂了，联系：lw96@live.com">docker加速<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>阿里云加速：<a href="https://yq.aliyun.com/articles/29941" target="_blank" rel="noopener noreferrer">Docker 镜像加速器<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p><strong>方法二brew cask：</strong></p> <p>复制</p> <div class="language-shell extra-class"><pre class="language-shell"><code>brew update 
+brew cask <span class="token function">install</span> <span class="token function">docker</span>
+
+<span class="token comment"># 删除的方法, 还需要手动删除Docker.app</span>
+brew cask uninstall <span class="token function">docker</span>
+</code></pre></div><p>上面的命令将会把Docker安装在<code>Applications</code>目录下。</p> <h2 id="windows上docker安装"><a href="#windows上docker安装" class="header-anchor">#</a> Windows上Docker安装</h2> <p>官方下载地址：<a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows" target="_blank" rel="noopener noreferrer">Docker Desktop for Windows<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>对系统的要求：</p> <blockquote><p>Requires Microsoft Windows 10 Professional or Enterprise 64-bit. For previous versions get <a href="https://docs.docker.com/toolbox/overview/" target="_blank" rel="noopener noreferrer">Docker Toolbox<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p></blockquote> <p>需要Windows 10专业版及企业的64位版本，在Windows server 2016以上亲测是可用的。Windows 8/7/Vista/Xp之类的，就别想了，老实去装Windows 10或者虚拟机中去使用。</p> <p><a href="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/windows-docker.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" target="_blank" rel="noopener noreferrer"><img src="http://blog.static.toimc.com/blog/img/2019/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/windows-docker.jpg?watermark/2/text/VG9pbWPlh7rlk4E=/fontsize/800" alt="图片裂了，联系：lw96@live.com">windows-docker安装示例<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="linux上docker安装"><a href="#linux上docker安装" class="header-anchor">#</a> Linux上Docker安装</h2> <h3 id="centos中docker安装方法"><a href="#centos中docker安装方法" class="header-anchor">#</a> Centos中Docker安装方法</h3> <ol><li><p>先删除旧的版本(如果没有可以跳过)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum remove <span class="token function">docker</span> <span class="token punctuation">\</span>
+                  docker-client <span class="token punctuation">\</span>
+                  docker-client-latest <span class="token punctuation">\</span>
+                  docker-common <span class="token punctuation">\</span>
+                  docker-latest <span class="token punctuation">\</span>
+                  docker-latest-logrotate <span class="token punctuation">\</span>
+                  docker-logrotate <span class="token punctuation">\</span>
+                  docker-engine
+</code></pre></div></li> <li><p>安装必须的依赖：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> yum-utils <span class="token punctuation">\</span>
+  device-mapper-persistent-data <span class="token punctuation">\</span>
+  lvm2
+</code></pre></div><p>添加<code>stable</code>的Docker-ce的源：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum-config-manager <span class="token punctuation">\</span>
+    --add-repo <span class="token punctuation">\</span>
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div></li> <li><p>安装<code>docker-ce</code>:</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+</code></pre></div></li> <li><p>选择指定的安装版本(可选)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ yum list docker-ce <span class="token parameter variable">--showduplicates</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-r</span>
+docker-ce.x86_64  <span class="token number">3</span>:18.09.1-3.el7      docker-ce-stable
+docker-ce.x86_64  <span class="token number">3</span>:18.09.0-3.el7      docker-ce-stable
+docker-ce.x86_64  <span class="token number">18.06</span>.1.ce-3.el7     docker-ce-stable
+docker-ce.x86_64  <span class="token number">18.06</span>.0.ce-3.el7     docker-ce-stable
+</code></pre></div><p>我们来举个例子，比如我们要安装<code>3:18.09.1-3.el7</code>这个版本，使用如下命令结构：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> docker-ce-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> docker-ce-cli-<span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> containerd.io
+</code></pre></div><p>命令说明：</p> <p>第一部分是<code>docker-ce</code>，第二部分是版本号<code>18.09.1</code>，看明白了吗？就是这样子：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> docker-ce-18.09.1 docker-ce-cli-18.09.1
+</code></pre></div></li> <li><p>启动服务并测试一下：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 启动服务</span>
+<span class="token function">sudo</span> systemctl start <span class="token function">docker</span>
+
+<span class="token comment"># 来一个Hello World吧</span>
+<span class="token function">sudo</span> <span class="token function">docker</span> run hello-world
+Unable to <span class="token function">find</span> image <span class="token string">'hello-world:latest'</span> locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete
+Digest: sha256:2557e3c07ed1e38f26e389462d03ed943586f744621577a99efb77324b0fe535
+Status: Downloaded newer image <span class="token keyword">for</span> hello-world:latest
+
+Hello from Docker<span class="token operator">!</span>
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps: 
+	<span class="token number">1</span>. The Docker client contacted the Docker daemon. 
+	<span class="token number">2</span>. The Docker daemon pulled the <span class="token string">&quot;hello-world&quot;</span> image from the Docker Hub.    			<span class="token punctuation">(</span>amd64<span class="token punctuation">)</span> 
+	<span class="token number">3</span>. The Docker daemon created a new container from that image <span class="token function">which</span> runs the    			executable that produces the output you are currently reading. 
+	<span class="token number">4</span>. The Docker daemon streamed that output to the Docker client, <span class="token function">which</span> sent it    		to your terminal.
+
+To try something <span class="token function">more</span> ambitious, you can run an Ubuntu container with:
+$ <span class="token function">docker</span> run <span class="token parameter variable">-it</span> ubuntu <span class="token function">bash</span>
+
+Share images, automate workflows, and <span class="token function">more</span> with a <span class="token function">free</span> Docker ID: 				  https://hub.docker.com/
+
+For <span class="token function">more</span> examples and ideas, visit: 
+https://docs.docker.com/get-started/
+</code></pre></div><p>如果看到上面的提示，说明Docker已经成功安装并运行了了。</p></li> <li><p>关于升级&amp;删除：</p> <p>升级：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 更新所有</span>
+yum <span class="token parameter variable">-y</span> update
+
+<span class="token comment"># 更新指定</span>
+</code></pre></div></li></ol> <p>yum -y update docker-ce docker-ce-cli containerd.io</p> <div class="language- extra-class"><pre class="language-text"><code>
+删除：
+
+```shell
+sudo yum remove docker-ce
+
+# 删除文件系统
+sudo rm -rf /var/lib/docker
+</code></pre></div><h3 id="debian中docker的安装方法"><a href="#debian中docker的安装方法" class="header-anchor">#</a> Debian中Docker的安装方法</h3> <ol><li><p>删除旧的版本(可跳过)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> remove <span class="token function">docker</span> docker-engine docker.io containerd runc
+</code></pre></div></li> <li><p>安装依赖：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token punctuation">\</span>    
+	apt-transport-https <span class="token punctuation">\</span>    
+	ca-certificates <span class="token punctuation">\</span>    
+	<span class="token function">curl</span> <span class="token punctuation">\</span>    
+	gnupg2 <span class="token punctuation">\</span>    
+	software-properties-common    
+	
+<span class="token comment"># 添加GPG key</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -
+
+$ <span class="token function">sudo</span> apt-key fingerprint 0EBFCD88
+pub   4096R/0EBFCD88 <span class="token number">2017</span>-02-22      
+	  Key fingerprint <span class="token operator">=</span> 9DC8 <span class="token number">5822</span> 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release <span class="token punctuation">(</span>CE deb<span class="token punctuation">)</span> <span class="token operator">&lt;</span>docker@docker.com<span class="token operator">&gt;</span>
+sub   4096R/F273FCD8 <span class="token number">2017</span>-02-22
+</code></pre></div></li> <li><p>使用<code>stable</code>安装源：</p> <ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-1" target="_blank" rel="noopener noreferrer">x86_64 / amd64<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+<span class="token string">&quot;deb [arch=amd64] https://download.docker.com/linux/debian \
+<span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-2" target="_blank" rel="noopener noreferrer">armhf<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+<span class="token string">&quot;deb [arch=armhf] https://download.docker.com/linux/debian \
+<span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-3" target="_blank" rel="noopener noreferrer">arm64<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+&quot;deb <span class="token punctuation">[</span>arch<span class="token operator">=</span>arm64<span class="token punctuation">]</span> https://download.docker.com/linux/debian <span class="token punctuation">\</span>
+<span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> <span class="token punctuation">\</span>
+stable
+</code></pre></div></li> <li><p>安装<code>docker-ce</code>：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+</code></pre></div></li> <li><p>安装指定的版本：(可选)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">apt-cache</span> madison docker-ce
+
+  docker-ce <span class="token operator">|</span> <span class="token number">5</span>:18.09.1~3-0~debian-stretch <span class="token operator">|</span> https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">5</span>:18.09.0~3-0~debian-stretch <span class="token operator">|</span> https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">18.06</span>.1~ce~3-0~debian        <span class="token operator">|</span> https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">18.06</span>.0~ce~3-0~debian        <span class="token operator">|</span> https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  <span class="token punctuation">..</span>.
+</code></pre></div><p>安装格式：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce<span class="token operator">=</span><span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> docker-ce-cli<span class="token operator">=</span><span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> containerd.io
+</code></pre></div><p>举例说明：比如要安装<code>5:18.09.1~3-0~debian-stretch</code>版本的docker的话：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce<span class="token operator">=</span><span class="token number">18.09</span>.1 docker-ce-cli<span class="token operator">=</span><span class="token number">18.09</span>.1 containerd.io
+</code></pre></div></li> <li><p>启动服务并测试：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> start
+
+<span class="token comment"># 查看Docker运行状态</span>
+$ <span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> status
+
+$ <span class="token function">sudo</span> <span class="token function">docker</span> run hello-world
+</code></pre></div></li></ol> <h3 id="ubuntu中docker安装方法"><a href="#ubuntu中docker安装方法" class="header-anchor">#</a> Ubuntu中Docker安装方法</h3> <ol><li><p>删除旧的版本(可跳过)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> remove <span class="token function">docker</span> docker-engine docker.io containerd runc
+</code></pre></div></li> <li><p>安装依赖：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token punctuation">\</span>
+    apt-transport-https <span class="token punctuation">\</span>
+    ca-certificates <span class="token punctuation">\</span>
+    <span class="token function">curl</span> <span class="token punctuation">\</span>
+    gnupg-agent <span class="token punctuation">\</span>
+    software-properties-common
+    
+<span class="token comment"># 添加GPG key</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -
+
+$ <span class="token function">sudo</span> apt-key fingerprint 0EBFCD88
+    
+pub   rsa4096 <span class="token number">2017</span>-02-22 <span class="token punctuation">[</span>SCEA<span class="token punctuation">]</span>
+      9DC8 <span class="token number">5822</span> 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           <span class="token punctuation">[</span> unknown<span class="token punctuation">]</span> Docker Release <span class="token punctuation">(</span>CE deb<span class="token punctuation">)</span> <span class="token operator">&lt;</span>docker@docker.com<span class="token operator">&gt;</span>
+sub   rsa4096 <span class="token number">2017</span>-02-22 <span class="token punctuation">[</span>S<span class="token punctuation">]</span>
+</code></pre></div></li> <li><p>使用<code>stable</code>安装源：</p> <ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-ubuntu-1" target="_blank" rel="noopener noreferrer">x86_64/amd64<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+   <span class="token string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+   stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-ubuntu-2" target="_blank" rel="noopener noreferrer">armhf<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+   <span class="token string">&quot;deb [arch=armhf] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+   stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-ubuntu-3" target="_blank" rel="noopener noreferrer">arm64<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+   <span class="token string">&quot;deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+   stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-ubuntu-4" target="_blank" rel="noopener noreferrer">ppc64le (IBM Power)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+   <span class="token string">&quot;deb [arch=ppc64el] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+   stable&quot;</span>
+</code></pre></div><ul><li><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/#tab-ubuntu-5" target="_blank" rel="noopener noreferrer">s390x (IBM Z)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> add-apt-repository <span class="token punctuation">\</span>
+   <span class="token string">&quot;deb [arch=s390x] https://download.docker.com/linux/ubuntu \
+   <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> \
+   stable&quot;</span>
+</code></pre></div></li> <li><p>安装<code>docker-ce</code>：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+</code></pre></div></li> <li><p>安装指定的版本：(可选)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">apt-cache</span> madison docker-ce
+
+  docker-ce <span class="token operator">|</span> <span class="token number">5</span>:18.09.1~3-0~ubuntu-xenial <span class="token operator">|</span> https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">5</span>:18.09.0~3-0~ubuntu-xenial <span class="token operator">|</span> https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">18.06</span>.1~ce~3-0~ubuntu       <span class="token operator">|</span> https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+  docker-ce <span class="token operator">|</span> <span class="token number">18.06</span>.0~ce~3-0~ubuntu       <span class="token operator">|</span> https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+  <span class="token punctuation">..</span>.
+</code></pre></div><p>安装格式：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce<span class="token operator">=</span><span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> docker-ce-cli<span class="token operator">=</span><span class="token operator">&lt;</span>VERSION_STRING<span class="token operator">&gt;</span> containerd.io
+</code></pre></div><p>举例说明：比如要安装<code>5:18.09.1~3-0~ubuntu-xenial</code>版本的docker的话：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce<span class="token operator">=</span><span class="token number">18.09</span>.1 docker-ce-cli<span class="token operator">=</span><span class="token number">18.09</span>.1 containerd.io
+</code></pre></div></li> <li><p>启动服务并测试：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> start
+
+<span class="token comment"># 查看Docker运行状态</span>
+$ <span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">docker</span> status
+
+$ <span class="token function">sudo</span> <span class="token function">docker</span> run hello-world
+</code></pre></div></li></ol> <h2 id="docker-compose集合命令"><a href="#docker-compose集合命令" class="header-anchor">#</a> Docker-compose集合命令</h2> <p>Compose工具是一个<code>批量</code>工具，用于运行与管理多个<code>docker</code>容器。</p> <p>官方文档：<a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener noreferrer">Install Docker Compose<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ol><li><p>在Mac/Windows中，已经集成了docker-compose命令</p></li> <li><p>在WindowsServer中
+先启动PowerShell</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token namespace">[Net.ServicePointManager]</span>::SecurityProtocol = <span class="token namespace">[Net.SecurityProtocolType]</span>::Tls12
+</code></pre></div><p>然后运行如下命令：</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token function">Invoke-WebRequest</span> <span class="token string">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Windows-x86_64.exe&quot;</span> <span class="token operator">-</span>UseBasicParsing <span class="token operator">-</span>OutFile <span class="token variable">$Env</span>:ProgramFiles\Docker\docker-compose<span class="token punctuation">.</span>exe
+</code></pre></div><p>然后测试一下：<code>docker-compose --version</code></p></li> <li><p>Linux中：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 下载docker-compose</span>
+<span class="token function">sudo</span> <span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token string">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> <span class="token parameter variable">-s</span><span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> <span class="token parameter variable">-m</span><span class="token variable">)</span></span>&quot;</span> <span class="token parameter variable">-o</span> /usr/local/bin/docker-compose
+
+<span class="token comment"># 给予执行权限</span>
+<span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+
+<span class="token comment"># 测试命令</span>
+$ <span class="token function">docker-compose</span> <span class="token parameter variable">--version</span>
+<span class="token function">docker-compose</span> version <span class="token number">1.23</span>.2, build 1110ad01
+</code></pre></div></li></ol> <h3 id="docker-compose的简单使用"><a href="#docker-compose的简单使用" class="header-anchor">#</a> docker-compose的简单使用</h3> <p>先找到一个目录例如 <code>/home</code>,编辑docker-compose.yml 文件 （没有该文件新建一个），按照 yamL 语法在文件中添加 你需要管理的 服务 ，这里以  两个 mysql 为例</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3&quot;</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mysql1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> MYSQL_ROOT_PASSWORD=123456
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 28002<span class="token punctuation">:</span><span class="token number">3306</span>
+
+  <span class="token key atrule">mysql2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> MYSQL_ROOT_PASSWORD=123456
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 28003<span class="token punctuation">:</span><span class="token number">3306</span>
+</code></pre></div><p>编辑好<code>docker-compose.yml</code>文件后 保存后退出，使用 <code>docker-compose up</code>命令去更新 docker-compose服务</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># ^C</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># vi docker-compose.yml </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker-compose up     </span>
+Creating network <span class="token string">&quot;home_default&quot;</span> with the default driver
+Pulling mysql1 <span class="token punctuation">(</span>mysql:<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+latest: Pulling from library/mysql
+80369df48736: Pull complete
+e8f52315cb10: Pull complete
+cf2189b391fc: Pull complete
+cc98f645c682: Pull complete
+27a27ac83f74: Pull complete
+fa1f04453414: Pull complete
+d45bf7d22d33: Pull complete
+3dbac26e409c: Pull complete
+9017140fb8c1: Pull complete
+b76dda2673ae: Pull complete
+bea9eb46d12a: Pull complete
+e1f050a38d0f: Pull complete
+Pulling mysql2 <span class="token punctuation">(</span>mysql:<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+latest: Pulling from library/mysql
+Creating home_mysql2_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+Creating home_mysql1_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+Attaching to home_mysql1_1, home_mysql2_1
+<span class="token punctuation">..</span>.
+</code></pre></div><p>使用 docker ps 查看docker 容器 ,可以看到 docker-compose.yml 中添加的两个服务镜像 已经 在运行中</p> <div class="language-shell extra-class"><pre class="language-shell"><code>-rw-r--r-- <span class="token number">1</span> root root <span class="token number">259</span> Nov <span class="token number">21</span> 07:09 docker-compose.yml
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+2c5b3fc20ee8        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">8</span> minutes ago       Up <span class="token number">8</span> minutes        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28002-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql1_1
+0d97c8d6cfb3        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">8</span> minutes ago       Up <span class="token number">8</span> minutes        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28003-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql2_1
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre></div><p>docker-compose 和 docker 一样 也有 <code>run</code>,<code>start</code>,<code>stop</code>,<code>rm</code>等命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                NAMES
+2c5b3fc20ee8        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">8</span> minutes ago       Up <span class="token number">8</span> minutes        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28002-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql1_1
+0d97c8d6cfb3        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">8</span> minutes ago       Up <span class="token number">8</span> minutes        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28003-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql2_1
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker-compose stop</span>
+Stopping home_mysql1_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+Stopping home_mysql2_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker-compose rm</span>
+Going to remove home_mysql1_1, home_mysql2_1
+Are you sure? <span class="token punctuation">[</span>yN<span class="token punctuation">]</span> y
+Removing home_mysql1_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+Removing home_mysql2_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre></div><h3 id="docker-compose-yml-文件-属性-详解"><a href="#docker-compose-yml-文件-属性-详解" class="header-anchor">#</a> docker-compose.yml 文件 属性 详解</h3> <h4 id="version"><a href="#version" class="header-anchor">#</a> version</h4> <p>作用：指定docker-Egine 的版本,指定 docker-compose.yml 文件的写法格式</p> <p>哪些Compose文件版本支持特定的Docker版本</p> <table><thead><tr><th style="text-align:left;"><strong>Compose file format（）</strong></th> <th style="text-align:left;"><strong>Docker Engine release</strong></th></tr></thead> <tbody><tr><td style="text-align:left;">3.7</td> <td style="text-align:left;">18.06.0+</td></tr> <tr><td style="text-align:left;">3.6</td> <td style="text-align:left;">18.02.0+</td></tr> <tr><td style="text-align:left;">3.5</td> <td style="text-align:left;">17.12.0+</td></tr> <tr><td style="text-align:left;">3.4</td> <td style="text-align:left;">17.09.0+</td></tr> <tr><td style="text-align:left;">3.3</td> <td style="text-align:left;">17.06.0+</td></tr> <tr><td style="text-align:left;">3.2</td> <td style="text-align:left;">17.04.0+</td></tr> <tr><td style="text-align:left;">3.1</td> <td style="text-align:left;">1.13.1+</td></tr> <tr><td style="text-align:left;">3.0</td> <td style="text-align:left;">1.13.0+</td></tr> <tr><td style="text-align:left;">2.4</td> <td style="text-align:left;">17.12.0+</td></tr> <tr><td style="text-align:left;">2.3</td> <td style="text-align:left;">17.06.0+</td></tr> <tr><td style="text-align:left;">2.2</td> <td style="text-align:left;">1.13.0+</td></tr> <tr><td style="text-align:left;">2.1</td> <td style="text-align:left;">1.12.0+</td></tr> <tr><td style="text-align:left;">2.0</td> <td style="text-align:left;">1.10.0+</td></tr> <tr><td style="text-align:left;">1.0</td> <td style="text-align:left;">1.9.1.+</td></tr></tbody></table> <p><a href="https://docs.docker.com/compose/compose-file/" target="_blank" rel="noopener noreferrer">官网提供的一个 version:3 的 案例<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>example Compose file version 3</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.7&quot;</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+
+  <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>alpine
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;6379&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> frontend
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+      <span class="token key atrule">update_config</span><span class="token punctuation">:</span>
+        <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span>
+        <span class="token key atrule">delay</span><span class="token punctuation">:</span> 10s
+      <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+
+  <span class="token key atrule">db</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> postgres<span class="token punctuation">:</span><span class="token number">9.4</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> db<span class="token punctuation">-</span>data<span class="token punctuation">:</span>/var/lib/postgresql/data
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> backend
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">placement</span><span class="token punctuation">:</span>
+        <span class="token key atrule">constraints</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>node.role == manager<span class="token punctuation">]</span>
+
+  <span class="token key atrule">vote</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> dockersamples/examplevotingapp_vote<span class="token punctuation">:</span>before
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;5000:80&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> frontend
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> redis
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+      <span class="token key atrule">update_config</span><span class="token punctuation">:</span>
+        <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span>
+      <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+
+  <span class="token key atrule">result</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> dockersamples/examplevotingapp_result<span class="token punctuation">:</span>before
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;5001:80&quot;</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> backend
+    <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> db
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+      <span class="token key atrule">update_config</span><span class="token punctuation">:</span>
+        <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span>
+        <span class="token key atrule">delay</span><span class="token punctuation">:</span> 10s
+      <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+
+  <span class="token key atrule">worker</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> dockersamples/examplevotingapp_worker
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> frontend
+      <span class="token punctuation">-</span> backend
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mode</span><span class="token punctuation">:</span> replicated
+      <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>APP=VOTING<span class="token punctuation">]</span>
+      <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+        <span class="token key atrule">delay</span><span class="token punctuation">:</span> 10s
+        <span class="token key atrule">max_attempts</span><span class="token punctuation">:</span> <span class="token number">3</span>
+        <span class="token key atrule">window</span><span class="token punctuation">:</span> 120s
+      <span class="token key atrule">placement</span><span class="token punctuation">:</span>
+        <span class="token key atrule">constraints</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>node.role == manager<span class="token punctuation">]</span>
+
+  <span class="token key atrule">visualizer</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> dockersamples/visualizer<span class="token punctuation">:</span>stable
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;8080:8080&quot;</span>
+    <span class="token key atrule">stop_grace_period</span><span class="token punctuation">:</span> 1m30s
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;/var/run/docker.sock:/var/run/docker.sock&quot;</span>
+    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">placement</span><span class="token punctuation">:</span>
+        <span class="token key atrule">constraints</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>node.role == manager<span class="token punctuation">]</span>
+
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">frontend</span><span class="token punctuation">:</span>
+  <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+
+<span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">db-data</span><span class="token punctuation">:</span>
+</code></pre></div><h4 id="services"><a href="#services" class="header-anchor">#</a> services</h4> <p>多个容器集合</p> <p>定义 本工程 的 服务列表 ，包含 应用于该服务启动的每个容器的配置</p> <h4 id="build"><a href="#build" class="header-anchor">#</a> build</h4> <p>配置构建时，Compose 会利用它自动构建镜像，该值可以是一个路径，也可以是一个对象，用于指定 Dockerfile 参数</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">build</span><span class="token punctuation">:</span> ./dir
+
+<span class="token comment"># or</span>
+
+<span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">context</span><span class="token punctuation">:</span> ./dir
+    <span class="token key atrule">dockerfile</span><span class="token punctuation">:</span> Dockerfile
+    <span class="token key atrule">args</span><span class="token punctuation">:</span>
+        <span class="token key atrule">buildno</span><span class="token punctuation">:</span> <span class="token number">1</span>
+</code></pre></div><h4 id="command"><a href="#command" class="header-anchor">#</a> <strong>command</strong></h4> <p>覆盖容器启动后默认执行的命令</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">command</span><span class="token punctuation">:</span> bundle exec thin <span class="token punctuation">-</span>p 3000
+
+<span class="token comment"># 或者</span>
+
+<span class="token key atrule">command</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>bundle<span class="token punctuation">,</span>exec<span class="token punctuation">,</span>thin<span class="token punctuation">,</span><span class="token punctuation">-</span>p<span class="token punctuation">,</span><span class="token number">3000</span><span class="token punctuation">]</span>
+</code></pre></div><h4 id="dns"><a href="#dns" class="header-anchor">#</a> dns</h4> <p>配置 dns 服务器，可以是一个值或列表</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">dns</span><span class="token punctuation">:</span> 8.8.8.8
+
+或者
+
+<span class="token key atrule">dns</span><span class="token punctuation">:</span> <span class="token punctuation">-</span> 8.8.8.8
+     <span class="token punctuation">-</span> 9.9.9.9
+</code></pre></div><h4 id="dns-search"><a href="#dns-search" class="header-anchor">#</a> dns_search</h4> <p>配置 DNS 搜索域，可以是一个值或列表</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">dns_search</span><span class="token punctuation">:</span> example.com
+
+或者
+
+<span class="token key atrule">dns_search</span><span class="token punctuation">:</span> <span class="token punctuation">-</span> dc1.example.com
+    		<span class="token punctuation">-</span> dc2.example.com
+</code></pre></div><h4 id="environment"><a href="#environment" class="header-anchor">#</a> environment</h4> <p>环境变量配置，可以用数组或字典两种方式</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token key atrule">RACK_ENV</span><span class="token punctuation">:</span> development
+    <span class="token key atrule">SHOW</span><span class="token punctuation">:</span> <span class="token string">'ture'</span>
+    
+或者
+    
+<span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> RACK_ENV=development
+    <span class="token punctuation">-</span> SHOW=ture
+</code></pre></div><h4 id="env-file"><a href="#env-file" class="header-anchor">#</a> env_file</h4> <p>从文件中获取环境变量，可以指定一个文件路径或路径列表，其优先级低于 environment 指定的环境变量</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">env_file</span><span class="token punctuation">:</span> .env
+
+或者
+
+<span class="token key atrule">env_file</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ./common.env
+</code></pre></div><h4 id="expose"><a href="#expose" class="header-anchor">#</a> expose</h4> <p>暴露端口，只将端口暴露给连接的服务，而不暴露给主机</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">expose</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">&quot;3000&quot;</span>
+    <span class="token punctuation">-</span> <span class="token string">&quot;8000&quot;</span>
+</code></pre></div><h4 id="image"><a href="#image" class="header-anchor">#</a> image</h4> <p>指定服务所使用的镜像</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">image</span><span class="token punctuation">:</span> java
+</code></pre></div><h4 id="network-mode"><a href="#network-mode" class="header-anchor">#</a> network_mode</h4> <p>设置网络模式</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">network_mode</span><span class="token punctuation">:</span> <span class="token string">&quot;bridge&quot;</span>
+<span class="token comment"># or</span>
+<span class="token key atrule">network_mode</span><span class="token punctuation">:</span> <span class="token string">&quot;host&quot;</span>
+<span class="token comment"># or</span>
+<span class="token key atrule">network_mode</span><span class="token punctuation">:</span> <span class="token string">&quot;none&quot;</span>
+<span class="token comment"># or</span>
+<span class="token key atrule">network_mode</span><span class="token punctuation">:</span> <span class="token string">&quot;service:[service name]&quot;</span>
+<span class="token comment"># or</span>
+<span class="token key atrule">network_mode</span><span class="token punctuation">:</span> <span class="token string">&quot;container:[container name/id]&quot;</span>
+</code></pre></div><h4 id="ports"><a href="#ports" class="header-anchor">#</a> ports</h4> <p>对外暴露的端口定义，和 expose 对应</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">ports</span><span class="token punctuation">:</span>   <span class="token comment"># 暴露端口信息  - &quot;宿主机端口:容器暴露端口&quot;- &quot;8763:8763&quot;- &quot;8763:8763&quot;</span>
+</code></pre></div><h4 id="links"><a href="#links" class="header-anchor">#</a> links</h4> <p>将指定容器连接到当前连接，可以设置别名，避免ip方式导致的容器重启动态改变的无法连接情况</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">links</span><span class="token punctuation">:</span>    <span class="token comment"># 指定服务名称:别名 </span>
+    <span class="token punctuation">-</span> docker<span class="token punctuation">-</span>compose<span class="token punctuation">-</span>eureka<span class="token punctuation">-</span>server<span class="token punctuation">:</span>compose<span class="token punctuation">-</span>eureka
+</code></pre></div><h4 id="volumes"><a href="#volumes" class="header-anchor">#</a> volumes</h4> <p>卷挂载路径</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> /lib
+  <span class="token punctuation">-</span> /var
+</code></pre></div><h4 id="logs"><a href="#logs" class="header-anchor">#</a> logs</h4> <p>日志输出信息</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">-</span><span class="token punctuation">-</span>no<span class="token punctuation">-</span>color          单色输出，不显示其他颜.
+<span class="token punctuation">-</span>f<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>follow        跟踪日志输出，就是可以实时查看日志
+<span class="token punctuation">-</span>t<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>timestamps    显示时间戳
+<span class="token punctuation">-</span><span class="token punctuation">-</span>tail              从日志的结尾显示，<span class="token punctuation">-</span><span class="token punctuation">-</span>tail=200
+</code></pre></div><h2 id="docker-仓库"><a href="#docker-仓库" class="header-anchor">#</a> Docker 仓库</h2> <p><a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">公共  仓库 docker-hub<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>在 docker-hub 上注册一个账号</p> <p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cshare%5C%E6%9C%AD%E8%AE%B0%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.assets%5C1574292427391.png" alt="1574292427391"></p> <p>这里可以看到 自己创建上传的镜像</p> <p>然后 在安装 docker 的 主机上登录 docker-hub 账号</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker login</span>
+Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="token string">'t have a Docker ID, head over to https://hub.docker.com to create one.
+Username: pigk^Hjoe^H^H^H^H^H
+Password: 
+Error response from daemon: Get https://registry-1.docker.io/v2/: unauthorized: incorrect username or password
+[root@VM_0_6_centos home]# docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don'</span>t have a Docker ID, <span class="token function">head</span> over to https://hub.docker.com to create one.
+Username: pigjoe
+Password: 
+WARNING<span class="token operator">!</span> Your password will be stored unencrypted <span class="token keyword">in</span> /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/<span class="token comment">#credentials-store</span>
+
+Login Succeeded
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre></div><h3 id="提交镜像"><a href="#提交镜像" class="header-anchor">#</a> 提交镜像</h3> <ul><li><ol><li>commit 镜像打tag</li></ol></li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">docker</span> commit 容器id<span class="token punctuation">(</span>container <span class="token function">id</span><span class="token punctuation">)</span> dockerhub用户名/镜像名称：镜像tag
+</code></pre></div><p>例如 提交 mysql 容器（打tag）</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">docker</span> commit d68f1d62a0f2 pigjoe/mysql:1.0
+</code></pre></div><ul><li>使用 <code>docker image</code> 命令 查看 镜像</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">docker</span> image
+</code></pre></div><ul><li>push 要 上传的 镜像</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ docker push 上传的镜像
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+d68f1d62a0f2        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">57</span> seconds ago      Exited <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token number">19</span> seconds ago                       home_mysql2_1
+37fd5e41efed        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   <span class="token number">57</span> seconds ago      Exited <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token number">19</span> seconds ago                       home_mysql1_1
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker-compose stop</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker-compose start</span>
+Starting mysql1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+Starting mysql2 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                NAMES
+d68f1d62a0f2        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   About a minute ago   Up <span class="token number">5</span> seconds        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28003-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql2_1
+37fd5e41efed        mysql               <span class="token string">&quot;docker-entrypoint.s…&quot;</span>   About a minute ago   Up <span class="token number">5</span> seconds        <span class="token number">33060</span>/tcp, <span class="token number">0.0</span>.0.0:28002-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   home_mysql1_1
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># ^C</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker commit d68f1d62a0f2 pigjoe/mysql:1.0</span>
+sha256:60eefadec7685120e9d1379a33d314d57c3d4152ad4066f00fd08f8c583258cd
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+pigjoe/mysql        <span class="token number">1.0</span>                 60eefadec768        <span class="token number">16</span> seconds ago      456MB
+mysql               latest              c8ee894bd2bd        <span class="token number">4</span> weeks ago         456MB
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># docker push pigjoe/mysql</span>
+The push refers to repository <span class="token punctuation">[</span>docker.io/pigjoe/mysql<span class="token punctuation">]</span>
+379b2ece0c61: Pushed 
+d06c354a14f8: Mounted from library/mysql 
+8521e29a77f7: Mounted from library/mysql 
+b0a6c99eccba: Mounted from library/mysql 
+a6dc48312854: Mounted from library/mysql 
+5a2d7ca14b2f: Mounted from library/mysql 
+13272fe0aa5c: Mounted from library/mysql 
+ca3e8d7fe261: Mounted from library/mysql 
+452ea71a57ff: Mounted from library/mysql 
+d8cb0457f31e: Mounted from library/mysql 
+3c353031df8b: Mounted from library/mysql 
+096401f81d2c: Mounted from library/mysql 
+67ecfc9591c8: Mounted from library/mysql 
+<span class="token number">1.0</span>: digest: sha256:5f98a8fd74670280fc60d04fbdf2b3b773db93e42ffd8977cac3713019c444ee size: <span class="token number">3035</span>
+<span class="token punctuation">[</span>root@VM_0_6_centos home<span class="token punctuation">]</span><span class="token comment"># </span>
+</code></pre></div><p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cshare%5C%E6%9C%AD%E8%AE%B0%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.assets%5C1574293713434.png" alt="1574293713434"></p> <p>登录 docker-hub 就可以 看到 刚才提交的 镜像</p> <h3 id="拉取镜像"><a href="#拉取镜像" class="header-anchor">#</a> 拉取镜像</h3> <p>如果想从 docker-hub 上拉取镜像</p> <p>使用 docker pull 命令</p> <p>例如拉取 刚才提交的 镜像</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">docker</span> pull pigjoe/mysql:1.0
+</code></pre></div><p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cshare%5C%E6%9C%AD%E8%AE%B0%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.assets%5C1574294028251.png" alt="1574294028251"></p> <p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cshare%5C%E6%9C%AD%E8%AE%B0%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5CDocker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.assets%5C1574293983732.png" alt="1574293983732"></p> <p>这里因为本地 已经存在 该镜像，所以 只是 更新 该镜像</p> <!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/10/2020, 3:16:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/" class="prev router-link-active">
+        查看系统命令
+      </a></span> <span class="next"><a href="/linux/linux02.html">
+        ssh密钥方式远程链接linux
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f8839a88.js" defer></script><script src="/assets/js/2.8d06e467.js" defer></script><script src="/assets/js/59.6022db72.js" defer></script>
+  </body>
+</html>

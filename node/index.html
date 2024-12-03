@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Koa | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.f8839a88.js" as="script"><link rel="preload" href="/assets/js/2.8d06e467.js" as="script"><link rel="preload" href="/assets/js/17.801ecbcc.js" as="script"><link rel="prefetch" href="/assets/js/10.75500dcd.js"><link rel="prefetch" href="/assets/js/11.592669c1.js"><link rel="prefetch" href="/assets/js/12.a9094538.js"><link rel="prefetch" href="/assets/js/13.2cf414ec.js"><link rel="prefetch" href="/assets/js/14.d2737ceb.js"><link rel="prefetch" href="/assets/js/15.8eb8f805.js"><link rel="prefetch" href="/assets/js/16.820d5c80.js"><link rel="prefetch" href="/assets/js/18.b2f69842.js"><link rel="prefetch" href="/assets/js/19.15396bbe.js"><link rel="prefetch" href="/assets/js/20.233b2644.js"><link rel="prefetch" href="/assets/js/21.858bfdd0.js"><link rel="prefetch" href="/assets/js/22.38ba5211.js"><link rel="prefetch" href="/assets/js/23.58fbdc70.js"><link rel="prefetch" href="/assets/js/24.15131ce6.js"><link rel="prefetch" href="/assets/js/25.7bce4e07.js"><link rel="prefetch" href="/assets/js/26.b37e74b8.js"><link rel="prefetch" href="/assets/js/27.64d94c4d.js"><link rel="prefetch" href="/assets/js/28.c78dfbd6.js"><link rel="prefetch" href="/assets/js/29.b576a40d.js"><link rel="prefetch" href="/assets/js/3.f9317427.js"><link rel="prefetch" href="/assets/js/30.29554d88.js"><link rel="prefetch" href="/assets/js/31.9af67186.js"><link rel="prefetch" href="/assets/js/32.d380b09a.js"><link rel="prefetch" href="/assets/js/33.eb0839b0.js"><link rel="prefetch" href="/assets/js/34.62b518b9.js"><link rel="prefetch" href="/assets/js/35.429a5bce.js"><link rel="prefetch" href="/assets/js/36.43c4d349.js"><link rel="prefetch" href="/assets/js/37.d6b42aa3.js"><link rel="prefetch" href="/assets/js/38.a7eec5a0.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.63a5e966.js"><link rel="prefetch" href="/assets/js/40.dc834d41.js"><link rel="prefetch" href="/assets/js/41.fcc4e1e8.js"><link rel="prefetch" href="/assets/js/42.e57f8aa8.js"><link rel="prefetch" href="/assets/js/43.15534ad1.js"><link rel="prefetch" href="/assets/js/44.eb90d815.js"><link rel="prefetch" href="/assets/js/45.6e206fc8.js"><link rel="prefetch" href="/assets/js/46.285350f5.js"><link rel="prefetch" href="/assets/js/47.cde65c12.js"><link rel="prefetch" href="/assets/js/48.1c870c67.js"><link rel="prefetch" href="/assets/js/49.2b6f4336.js"><link rel="prefetch" href="/assets/js/5.2c45f22c.js"><link rel="prefetch" href="/assets/js/50.1a667582.js"><link rel="prefetch" href="/assets/js/51.600bc042.js"><link rel="prefetch" href="/assets/js/52.2e105d94.js"><link rel="prefetch" href="/assets/js/53.fa0284c4.js"><link rel="prefetch" href="/assets/js/54.0b748f22.js"><link rel="prefetch" href="/assets/js/55.ee05dee1.js"><link rel="prefetch" href="/assets/js/56.21abdcc3.js"><link rel="prefetch" href="/assets/js/57.26ddbf76.js"><link rel="prefetch" href="/assets/js/58.91fd9800.js"><link rel="prefetch" href="/assets/js/59.6022db72.js"><link rel="prefetch" href="/assets/js/6.e9b45abe.js"><link rel="prefetch" href="/assets/js/60.1f2889ae.js"><link rel="prefetch" href="/assets/js/61.46040c7d.js"><link rel="prefetch" href="/assets/js/62.af7e9fcd.js"><link rel="prefetch" href="/assets/js/63.2fb355ca.js"><link rel="prefetch" href="/assets/js/64.99a87693.js"><link rel="prefetch" href="/assets/js/65.005ae6f4.js"><link rel="prefetch" href="/assets/js/66.12940877.js"><link rel="prefetch" href="/assets/js/67.b4a93190.js"><link rel="prefetch" href="/assets/js/68.c8d9d13c.js"><link rel="prefetch" href="/assets/js/69.158d7968.js"><link rel="prefetch" href="/assets/js/7.bbffe35f.js"><link rel="prefetch" href="/assets/js/70.4e4a3ae3.js"><link rel="prefetch" href="/assets/js/71.487c7568.js"><link rel="prefetch" href="/assets/js/72.e2a65bcb.js"><link rel="prefetch" href="/assets/js/8.bda61152.js"><link rel="prefetch" href="/assets/js/9.f87a0e7d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/node/" aria-current="page" class="active sidebar-link">Koa</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/#简单使用" class="sidebar-link">简单使用</a></li><li class="sidebar-sub-header"><a href="/node/#koa的链式调用和原理" class="sidebar-link">Koa的链式调用和原理</a></li><li class="sidebar-sub-header"><a href="/node/#使用-koa开发-restful-接口" class="sidebar-link">使用 Koa开发 restful 接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/#koa-router" class="sidebar-link">koa-router</a></li><li class="sidebar-sub-header"><a href="/node/#koa-body" class="sidebar-link">koa-body</a></li><li class="sidebar-sub-header"><a href="/node/#koa-cors" class="sidebar-link">@koa/cors</a></li><li class="sidebar-sub-header"><a href="/node/#koa-combine-routers" class="sidebar-link">koa-combine-routers</a></li></ul></li><li class="sidebar-sub-header"><a href="/node/#koa-开发热加载-es6语法支持" class="sidebar-link">koa 开发热加载，ES6语法支持</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/#热加载" class="sidebar-link">热加载</a></li><li class="sidebar-sub-header"><a href="/node/#es6-支持和-webpack" class="sidebar-link">ES6 支持和 webpack</a></li></ul></li><li class="sidebar-sub-header"><a href="/node/#如何调试webpack" class="sidebar-link">如何调试webpack</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/#vscode-调试配置" class="sidebar-link">vscode 调试配置</a></li></ul></li><li class="sidebar-sub-header"><a href="/node/#优化-webpack-配置" class="sidebar-link">优化 webpack 配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/#npm-check-updates" class="sidebar-link">npm-check-updates</a></li></ul></li></ul></li><li><a href="/node/centos安装node.html" class="sidebar-link">centos7 快速安装Node 稳定发行版</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="koa"><a href="#koa" class="header-anchor">#</a> Koa</h1> <p>Koa 是一个新的 web 框架，由 Express 幕后的原班人马打造， 致力于成为 web 应用和 API 开发领域中的一个更小、更富有表现力、更健壮的基石。 通过利用 async 函数，Koa 帮你丢弃回调函数，并有力地增强错误处理。 Koa 并没有捆绑任何中间件， 而是提供了一套优雅的方法，帮助您快速而愉快地编写服务端应用程序。</p> <h2 id="简单使用"><a href="#简单使用" class="header-anchor">#</a> 简单使用</h2> <ul><li>安装</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i koa <span class="token parameter variable">-S</span>
+</code></pre></div><ul><li>必须的 hello world</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">ctx</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token string">'Hello World'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>ctx 上下文</li></ul> <p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cstudy_workspace%5Cvuepress%5Cdocs.vuepress%5Cpublic%5Cimg%5Cnode%5Cnode-koa-01.png" alt="1574861511874"></p> <h2 id="koa的链式调用和原理"><a href="#koa的链式调用和原理" class="header-anchor">#</a> Koa的链式调用和原理</h2> <p>Koa 是一个 通过 使用各种中间件去  处理 各种业务的 nodejs框架</p> <p>可以通过链式调用的形式去 调用 中间件，像一个洋葱模型一样</p> <p><img src="F:%5Cmyfiles%5C%E5%AD%A6%E4%B9%A0%5Cstudy_workspace%5Cvuepress%5Cdocs.vuepress%5Cpublic%5Cimg%5Cnode%5Cnode-koa-02.png" alt="1574863298571"></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> Koa <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">const</span> <span class="token function-variable function">middleware</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is a middleware'</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token comment">// next()</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">middleware1</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is a middleware1'</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is a middleware1 ending'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">middleware2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is a middleware2'</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is a middleware2 ending'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware<span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3001</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 运行输出 结果为</span>
+<span class="token keyword">this</span> is a middleware1
+<span class="token operator">/</span>
+<span class="token keyword">this</span> is a middleware2
+<span class="token operator">/</span>
+<span class="token keyword">this</span> is a middleware
+<span class="token operator">/</span>
+<span class="token keyword">this</span> is a middleware2 ending
+<span class="token keyword">this</span> is a middleware1 ending
+
+</code></pre></div><p>上述的代码 如果 调用运行不同</p> <div class="language-js extra-class"><pre class="language-js"><code># app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware2<span class="token punctuation">)</span>
+
+<span class="token comment">// 运行输出结果为 </span>
+<span class="token keyword">this</span> is a middleware
+<span class="token operator">/</span>
+
+# app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>middleware2<span class="token punctuation">)</span>
+<span class="token comment">// 运行输出结果为 </span>
+<span class="token keyword">this</span> is a middleware1
+<span class="token operator">/</span>
+<span class="token keyword">this</span> is a middleware
+<span class="token operator">/</span>
+<span class="token keyword">this</span> is a middleware1 ending
+</code></pre></div><p>这说明 koa  调用中间件 时 遇到 没有 调用 next () 时 会默认 请求 结束，直接返回；如果遇到 调用 next() 方法时，会暂停当前中间件的执行，转而交给下一个中间件去执行，如果下一个中间件 没有调用 next()方法时，就会默认请求结束，返回继续去执行 上一级中间件的的next() 方法的后面语句。</p> <h2 id="使用-koa开发-restful-接口"><a href="#使用-koa开发-restful-接口" class="header-anchor">#</a> 使用 Koa开发 restful 接口</h2> <p>会使用到 的中间件 有</p> <ul><li>路由： koa-router</li> <li>协议解析： koa-body</li> <li>跨域处理： @koa/cors</li></ul> <h3 id="koa-router"><a href="#koa-router" class="header-anchor">#</a> koa-router</h3> <h3 id="koa-body"><a href="#koa-body" class="header-anchor">#</a> koa-body</h3> <h3 id="koa-cors"><a href="#koa-cors" class="header-anchor">#</a> @koa/cors</h3> <h3 id="koa-combine-routers"><a href="#koa-combine-routers" class="header-anchor">#</a> koa-combine-routers</h3> <h2 id="koa-开发热加载-es6语法支持"><a href="#koa-开发热加载-es6语法支持" class="header-anchor">#</a> koa 开发热加载，ES6语法支持</h2> <h3 id="热加载"><a href="#热加载" class="header-anchor">#</a> 热加载</h3> <p>安装 nodemon 插件 热加载</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i <span class="token parameter variable">-D</span> nodemon
+</code></pre></div><p>然后使用 nodemon 监听 入口文件</p> <div class="language-shell extra-class"><pre class="language-shell"><code>npx nodemon src/index.js
+</code></pre></div><p>或者 在 package.json 添加 script 命令</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// package.json</span>
+
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;koastaic&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;nodemon src/index.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;@koa/cors&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.11.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-body&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.1.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-combine-routers&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-helmet&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-json&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-router&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.4.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;koa-static&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.0.0&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;nodemon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;webpack&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.41.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;webpack-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.3.10&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="es6-支持和-webpack"><a href="#es6-支持和-webpack" class="header-anchor">#</a> ES6 支持和 webpack</h3> <p>安装 webpack</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i <span class="token parameter variable">-D</span> webpack webpack-cli
+</code></pre></div><p>安装 babel</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-D</span> clean-webpack-plugin webpack-node-externals @babel/core @babel/node @babel/preset-env babel-loader  cross-env
+</code></pre></div><ul><li>clean-webpack-plugin : 主要用于清理 dist 目录下的一些文件</li> <li>webpack-node-externals ： 主要是针对 nodemodules 目录下的文件进行排除处理，这样就不会去处理node_modules 目录下的文件</li> <li>@babel/core : babel 的核心</li> <li>@babel/node : babel 调试用到</li> <li>@babel/preset-env : 对ES6的一些新特性增加支持</li> <li>babel-loader ： webpack 中用到的</li> <li>cross-env : 设置环境变量</li></ul> <p>项目根目录下新建 webpack.config.js</p> <div class="language- extra-class"><pre class="language-text"><code>// webpack.config.js
+
+const path = require('path')
+const nodeExcternals = require('webpack-node-externals')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+const webpackconfig = {
+  target: 'node',
+  mode: 'development',
+  entry: {
+    server: path.join(__dirname, 'src/index.js')
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.join(__dirname, './dist')
+  },
+  devtool: 'eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+        },
+        exclude: [path.join(__dirname, '/node_modules')]
+      }
+    ]
+  },
+  externals: [nodeExcternals()],
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
+  node: {
+    console: true,
+    global: true,
+    process: true,
+    Buffer: true,
+    __filename: true,
+    __dirname: true,
+    setImmediate: true,
+    path: true
+  }
+}
+
+module.exports = webpackconfig
+</code></pre></div><p>根目录下新建 <code>.babelrc</code> 文件</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;presets&quot;: [
+    [
+      &quot;@babel/preset-env&quot;,
+      {
+        &quot;targets&quot;: {
+          &quot;node&quot;: &quot;current&quot;
+        }
+      }
+    ]
+  ]
+}
+
+</code></pre></div><p>使用 命令检查下,查看有无报错，没有报错就可以 在 项目中使用 ES6 语法</p> <div class="language- extra-class"><pre class="language-text"><code>npx webpack 
+</code></pre></div><p>将入口文件 src/index.js 改写 成 ES6 语法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+
+<span class="token comment">// const koa = require('koa')</span>
+<span class="token comment">// const path = require('path')</span>
+<span class="token comment">// const helmet = require('koa-helmet')</span>
+<span class="token comment">// const statics = require('koa-static')</span>
+<span class="token comment">// const router = require('./routes/routes')</span>
+
+<span class="token keyword">import</span> Koa <span class="token keyword">from</span> <span class="token string">'koa'</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span>
+<span class="token keyword">import</span> helmet <span class="token keyword">from</span> <span class="token string">'koa-helmet'</span>
+<span class="token keyword">import</span> statics <span class="token keyword">from</span> <span class="token string">'koa-static'</span>
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./routes/routes'</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">koa</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">helmet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">statics</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span>
+</code></pre></div><p>在 项目中使用 ES6语法 之后，想要运行，就不能再直接使用 node 运行，因为这时候项目中已经 含有 ES6语法，运行会报语法错误</p> <p><img src="/assets/img/node-koa-03.806bd98b.png" alt="1575382397754"></p> <p>这时候 要想运行 服务</p> <p>需要使用 babel-node 来运行服务</p> <div class="language-shell extra-class"><pre class="language-shell"><code>npx babel-node src/index.js
+</code></pre></div><p>nodemon 热加载</p> <div class="language- extra-class"><pre class="language-text"><code>npx nodemon --exec babel-node src/index.js
+</code></pre></div><p>所以 现在 package.json 中的热加载 nodemon 也需要重新配置</p> <div class="language- extra-class"><pre class="language-text"><code>// package.json
+
+{
+  &quot;name&quot;: &quot;koawebpack&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start:es6&quot;: &quot;nodemon --exec babel-node src/index.js&quot;,
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;@koa/cors&quot;: &quot;^3.0.0&quot;,
+    &quot;koa&quot;: &quot;^2.11.0&quot;,
+    &quot;koa-body&quot;: &quot;^4.1.1&quot;,
+    &quot;koa-combine-routers&quot;: &quot;^4.0.2&quot;,
+    &quot;koa-helmet&quot;: &quot;^5.2.0&quot;,
+    &quot;koa-json&quot;: &quot;^2.0.2&quot;,
+    &quot;koa-router&quot;: &quot;^7.4.0&quot;,
+    &quot;koa-static&quot;: &quot;^5.0.0&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@babel/core&quot;: &quot;^7.7.4&quot;,
+    &quot;@babel/node&quot;: &quot;^7.7.4&quot;,
+    &quot;@babel/preset-env&quot;: &quot;^7.7.4&quot;,
+    &quot;babel-loader&quot;: &quot;^8.0.6&quot;,
+    &quot;clean-webpack-plugin&quot;: &quot;^3.0.0&quot;,
+    &quot;cross-env&quot;: &quot;^6.0.3&quot;,
+    &quot;nodemon&quot;: &quot;^2.0.1&quot;,
+    &quot;webpack&quot;: &quot;^4.41.2&quot;,
+    &quot;webpack-cli&quot;: &quot;^3.3.10&quot;,
+    &quot;webpack-node-externals&quot;: &quot;^1.7.2&quot;
+  }
+}
+
+</code></pre></div><h2 id="如何调试webpack"><a href="#如何调试webpack" class="header-anchor">#</a> 如何调试webpack</h2> <p>执行命令</p> <div class="language- extra-class"><pre class="language-text"><code>npx node --inspect-brk ./node_modules/.bin/webpack --inline --progress
+</code></pre></div><p>然后 通过 chorme 进行调试</p> <p><img src="/assets/img/node-koa-04.64f46337.png" alt="1575463155966"></p> <h3 id="vscode-调试配置"><a href="#vscode-调试配置" class="header-anchor">#</a> vscode 调试配置</h3> <p><img src="/assets/img/node-koa-05.6ae989f1.png" alt="1575465123940"></p> <h2 id="优化-webpack-配置"><a href="#优化-webpack-配置" class="header-anchor">#</a> 优化 webpack 配置</h2> <h3 id="npm-check-updates"><a href="#npm-check-updates" class="header-anchor">#</a> npm-check-updates</h3> <p>全局安装 npm-check-updates</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> npm-check-updates
+</code></pre></div><p>安装完成后 就可以使用 ncu --help 查看 指令</p> <div class="language- extra-class"><pre class="language-text"><code>ncu --help
+</code></pre></div><p>在项目下执行 命令 <code>ncu</code>可以检索项目下的 package.json里面的依赖 版本更新情况，可以考虑是否对项目中的某些依赖进行升级</p> <div class="language-shell extra-class"><pre class="language-shell"><code>ncu
+</code></pre></div><p>执行 <code>ncu -u</code>可以改写 package.json 将有版本更新的 依赖更新版本写进 package.json 中</p> <p>然后删除 node_modules</p> <p>重新 npm install 安装新版本的依赖</p> <!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">4/10/2020, 3:16:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/node/centos安装node.html">
+        centos7 快速安装Node 稳定发行版
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f8839a88.js" defer></script><script src="/assets/js/2.8d06e467.js" defer></script><script src="/assets/js/17.801ecbcc.js" defer></script>
+  </body>
+</html>

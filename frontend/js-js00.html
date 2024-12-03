@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1、JS中的数据类型 | 个人主页</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.ico">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <meta name="description" content="rh的博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    
+    <link rel="preload" href="/assets/css/0.styles.74a02103.css" as="style"><link rel="preload" href="/assets/js/app.f8839a88.js" as="script"><link rel="preload" href="/assets/js/2.8d06e467.js" as="script"><link rel="preload" href="/assets/js/21.858bfdd0.js" as="script"><link rel="prefetch" href="/assets/js/10.75500dcd.js"><link rel="prefetch" href="/assets/js/11.592669c1.js"><link rel="prefetch" href="/assets/js/12.a9094538.js"><link rel="prefetch" href="/assets/js/13.2cf414ec.js"><link rel="prefetch" href="/assets/js/14.d2737ceb.js"><link rel="prefetch" href="/assets/js/15.8eb8f805.js"><link rel="prefetch" href="/assets/js/16.820d5c80.js"><link rel="prefetch" href="/assets/js/17.801ecbcc.js"><link rel="prefetch" href="/assets/js/18.b2f69842.js"><link rel="prefetch" href="/assets/js/19.15396bbe.js"><link rel="prefetch" href="/assets/js/20.233b2644.js"><link rel="prefetch" href="/assets/js/22.38ba5211.js"><link rel="prefetch" href="/assets/js/23.58fbdc70.js"><link rel="prefetch" href="/assets/js/24.15131ce6.js"><link rel="prefetch" href="/assets/js/25.7bce4e07.js"><link rel="prefetch" href="/assets/js/26.b37e74b8.js"><link rel="prefetch" href="/assets/js/27.64d94c4d.js"><link rel="prefetch" href="/assets/js/28.c78dfbd6.js"><link rel="prefetch" href="/assets/js/29.b576a40d.js"><link rel="prefetch" href="/assets/js/3.f9317427.js"><link rel="prefetch" href="/assets/js/30.29554d88.js"><link rel="prefetch" href="/assets/js/31.9af67186.js"><link rel="prefetch" href="/assets/js/32.d380b09a.js"><link rel="prefetch" href="/assets/js/33.eb0839b0.js"><link rel="prefetch" href="/assets/js/34.62b518b9.js"><link rel="prefetch" href="/assets/js/35.429a5bce.js"><link rel="prefetch" href="/assets/js/36.43c4d349.js"><link rel="prefetch" href="/assets/js/37.d6b42aa3.js"><link rel="prefetch" href="/assets/js/38.a7eec5a0.js"><link rel="prefetch" href="/assets/js/39.2f5a06ea.js"><link rel="prefetch" href="/assets/js/4.63a5e966.js"><link rel="prefetch" href="/assets/js/40.dc834d41.js"><link rel="prefetch" href="/assets/js/41.fcc4e1e8.js"><link rel="prefetch" href="/assets/js/42.e57f8aa8.js"><link rel="prefetch" href="/assets/js/43.15534ad1.js"><link rel="prefetch" href="/assets/js/44.eb90d815.js"><link rel="prefetch" href="/assets/js/45.6e206fc8.js"><link rel="prefetch" href="/assets/js/46.285350f5.js"><link rel="prefetch" href="/assets/js/47.cde65c12.js"><link rel="prefetch" href="/assets/js/48.1c870c67.js"><link rel="prefetch" href="/assets/js/49.2b6f4336.js"><link rel="prefetch" href="/assets/js/5.2c45f22c.js"><link rel="prefetch" href="/assets/js/50.1a667582.js"><link rel="prefetch" href="/assets/js/51.600bc042.js"><link rel="prefetch" href="/assets/js/52.2e105d94.js"><link rel="prefetch" href="/assets/js/53.fa0284c4.js"><link rel="prefetch" href="/assets/js/54.0b748f22.js"><link rel="prefetch" href="/assets/js/55.ee05dee1.js"><link rel="prefetch" href="/assets/js/56.21abdcc3.js"><link rel="prefetch" href="/assets/js/57.26ddbf76.js"><link rel="prefetch" href="/assets/js/58.91fd9800.js"><link rel="prefetch" href="/assets/js/59.6022db72.js"><link rel="prefetch" href="/assets/js/6.e9b45abe.js"><link rel="prefetch" href="/assets/js/60.1f2889ae.js"><link rel="prefetch" href="/assets/js/61.46040c7d.js"><link rel="prefetch" href="/assets/js/62.af7e9fcd.js"><link rel="prefetch" href="/assets/js/63.2fb355ca.js"><link rel="prefetch" href="/assets/js/64.99a87693.js"><link rel="prefetch" href="/assets/js/65.005ae6f4.js"><link rel="prefetch" href="/assets/js/66.12940877.js"><link rel="prefetch" href="/assets/js/67.b4a93190.js"><link rel="prefetch" href="/assets/js/68.c8d9d13c.js"><link rel="prefetch" href="/assets/js/69.158d7968.js"><link rel="prefetch" href="/assets/js/7.bbffe35f.js"><link rel="prefetch" href="/assets/js/70.4e4a3ae3.js"><link rel="prefetch" href="/assets/js/71.487c7568.js"><link rel="prefetch" href="/assets/js/72.e2a65bcb.js"><link rel="prefetch" href="/assets/js/8.bda61152.js"><link rel="prefetch" href="/assets/js/9.f87a0e7d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74a02103.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="个人主页" class="logo"> <span class="site-name can-hide">个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客文章" class="dropdown-title"><span class="title">博客文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客文章" class="mobile-dropdown-title"><span class="title">博客文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test/" class="nav-link">
+  测试
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link router-link-active">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/other/" class="nav-link">
+  杂文
+</a></li><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/readlog.html" class="nav-link">
+  阅读日志
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/JoeHR/vuePress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javascript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/js-js00.html" aria-current="page" class="active sidebar-link">JS基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_1、js中的数据类型" class="sidebar-link">1、JS中的数据类型</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_2、为什么不推荐使用-var-a-undefined" class="sidebar-link">2、为什么不推荐使用 var a = undefined</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_3、关于js中的大数运算" class="sidebar-link">3、关于JS中的大数运算</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_4、js中判断对象中某个属性是否存在" class="sidebar-link">4、JS中判断对象中某个属性是否存在</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_5、-1-2-3-map-parseint" class="sidebar-link">5、['1','2','3'].map(parseInt)</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_6、在dom中使用-getelementbyclassname-与-queryselectorall-的区别" class="sidebar-link">6、在dom中使用 getElementByClassName 与 querySelectorAll 的区别</a></li><li class="sidebar-sub-header"><a href="/frontend/js-js00.html#_7、异步观察目标元素与其祖先元素交叉-重叠-状态的api-上提加载-滚动到底部加载更多" class="sidebar-link">7、异步观察目标元素与其祖先元素交叉（重叠）状态的API, 上提加载，滚动到底部加载更多</a></li></ul></li><li><a href="/frontend/js-js01.html" class="sidebar-link">语音合成</a></li><li><a href="/frontend/js-js02.html" class="sidebar-link">JS循环优化</a></li><li><a href="/frontend/js-js03.html" class="sidebar-link">JS前端手写源码</a></li><li><a href="/frontend/js-js04.html" class="sidebar-link">JS前端实现十大经典排序算法</a></li><li><a href="/frontend/js-js05.html" class="sidebar-link">一些优秀的工具函数</a></li><li><a href="/frontend/js-reduce的使用技巧.html" class="sidebar-link">reduce的使用技巧</a></li><li><a href="/frontend/js-promise面试相关.html" class="sidebar-link">promise面试相关</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue学习</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试题</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1、js中的数据类型"><a href="#_1、js中的数据类型" class="header-anchor">#</a> 1、JS中的数据类型</h2> <p>JS中存在8种数据结构</p> <blockquote><p>原始值： 除了 <em>Object</em> 以外，所有类型都定义了表示在语言最低层面的不可变值，我们将这些值称为原始值。</p></blockquote> <ul><li>原始值类型</li></ul> <ul><li>null</li> <li>undefined</li> <li>Boolean</li> <li>Number</li> <li>BigInt</li> <li>String</li> <li>Symbol</li></ul> <ul><li>引用类型
+<ul><li>Object</li></ul></li></ul> <h2 id="_2、为什么不推荐使用-var-a-undefined"><a href="#_2、为什么不推荐使用-var-a-undefined" class="header-anchor">#</a> 2、为什么不推荐使用 <code>var a = undefined</code></h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 在 js中 为什么不推荐使用 var a = undefined</span>
+
+<span class="token keyword">var</span> a<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">void</span> <span class="token number">0</span>
+
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">void</span> <span class="token number">1</span>
+
+
+</code></pre></div><blockquote><p>** 原因1**: 因为在 js中 <code>undefined</code> 不是一个关键字，而是 <code>window</code>的一个属性 <code>window.undefined</code>;并且 <code>window.undefined</code> 这个属性不可被赋值</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>
+window<span class="token punctuation">.</span>undefined
+
+window<span class="token punctuation">.</span>undefined <span class="token operator">=</span> <span class="token number">1</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>undefined<span class="token punctuation">)</span>  <span class="token comment">// undefined</span>
+
+</code></pre></div><blockquote><p><strong>原因2</strong>: 在局部作用域中，由于  <code>undefined</code> 不是关键字，所以可以 将其用作 变量名，就会出现 重写 <code>undefined</code></p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">function</span> <span class="token function">m</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> <span class="token keyword">undefined</span> <span class="token operator">=</span> <span class="token number">1</span>
+
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span>
+
+  <span class="token keyword">var</span> b<span class="token punctuation">;</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="_3、关于js中的大数运算"><a href="#_3、关于js中的大数运算" class="header-anchor">#</a> 3、关于JS中的大数运算</h2> <p>JS中的number的几个属性</p> <ul><li><p>Number.EPSILON : 表示 1与 Number 可表示的大于1的最小的浮点数之间的差值；其属性值 无限接近于 <code>2.2204460492503130808472633361816E-16</code>或<code>2^-52</code></p></li> <li><p>Number.MAX_SAFE_INTEGER: 常量表示在 JavaScript 中最大的安全整数,其值为<code>2^53 - 1</code>即<code>9007199254740991</code></p></li> <li><p>MAX_VALUE 属性表示在 JavaScript 里所能表示的最大数值,其值无限接近于<code>1.7976931348623157e+308</code>,大于 <code>MAX_VALUE</code>的值表示为 <code>Infinity</code></p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>x <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">;</span>
+y <span class="token operator">=</span> <span class="token number">0.3</span><span class="token punctuation">;</span>
+z <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">;</span>
+
+Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>x <span class="token operator">-</span> y <span class="token operator">+</span> z<span class="token punctuation">)</span> <span class="token operator">&lt;</span> Number<span class="token punctuation">.</span><span class="token constant">EPSILON</span> <span class="token comment">// true</span>
+
+Number<span class="token punctuation">.</span><span class="token constant">MAX_SAFE_INTEGER</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">===</span> Number<span class="token punctuation">.</span><span class="token constant">MAX_SAFE_INTEGER</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token comment">// true</span>
+</code></pre></div><h2 id="_4、js中判断对象中某个属性是否存在"><a href="#_4、js中判断对象中某个属性是否存在" class="header-anchor">#</a> 4、JS中判断对象中某个属性是否存在</h2> <p>最完善的方法是 使用 for in</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">function</span> <span class="token function">hasProperty</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> key <span class="token keyword">in</span> obj
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">hasPropertyV1</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// Object.keys 获取对象上所有可枚举属性的属性名</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">hasPropertyV2</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// 判断该对象是否具有该属性，但无法判断其原型上的属性</span>
+  <span class="token keyword">return</span> obj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> o <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span><span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">enumerable</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">value</span><span class="token operator">:</span><span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'toString'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// true</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV1</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV1</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV1</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV1</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'toString'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV2</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV2</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV2</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hasPropertyV2</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span><span class="token string">'toString'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+
+</code></pre></div><h2 id="_5、-1-2-3-map-parseint"><a href="#_5、-1-2-3-map-parseint" class="header-anchor">#</a> 5、['1','2','3'].map(parseInt)</h2> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>parseInt<span class="token punctuation">)</span>
+
+<span class="token comment">// 等价于</span>
+
+<span class="token punctuation">[</span>
+  <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">// radix 输入0时，如果输入的 string 以任何（非0）开头，radix 是 10 (十进制) ,因此 1转换10进制还是1</span>
+  <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">// radix 输入1时，不在 2～36 之间，所以返回 NaN</span>
+  <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'3'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">// radix 输入2时，表示以 二进制来解析 '3'字符串 并转为10进制整数输出 ，但以2进制解析 '3'解析不了，因为二进制中 不可能出现3；所以也返回 NaN</span>
+<span class="token punctuation">]</span>
+
+
+</code></pre></div><blockquote><p>parseInt(string,radix) 函数可以传递两个参数： 解析一个字符串并返回指定基数的十进制整数</p></blockquote> <p>string第一个参数是要转换的字符串，如果传入的不是一个字符串，则将其转换为字符串（使用 <code>toString</code>操作）,字符串开头的空白符将会被忽略
+radix第二个参数是可选参数，表示进制的基数（2到36之间的整数），<strong>如果超出这个范围，将返回 <code>NaN</code></strong>;假如 传入<code>0</code>或未指定，基数将会根据字符串的值进行推算。注意，推算的结果不会永远是默认<code>10</code>！</p> <p><strong>如果第一个字符不能转换为数字，parseInt 会返回 NaN。</strong></p> <p><strong>如果radix 是 undefined、0 或未指定的</strong>，JS会假定一下情况：</p> <ul><li>1、如果 <code>string</code> 是 以 <code>0x</code>或<code>0X</code>开头的，那么 <code>radix</code> 被假定为 16，字符串的其余部分被当作 16进制数 去解析</li> <li>2、如果输入的 <code>string</code> 是以 <code>0</code>开头，<code>radix</code>被假定为 8（8进制）或10 （10进制）。具体选择哪个radix 取决于实现。<code>ECMAScript 5 澄清了应该使用 10 (十进制)，但不是所有的浏览器都支持。</code>因此，在使用 parseInt 时，一定要指定一个 radix。</li> <li>3、如果输入的 string 以任何其他值开头，radix 是 10 (十进制)</li></ul> <h2 id="_6、在dom中使用-getelementbyclassname-与-queryselectorall-的区别"><a href="#_6、在dom中使用-getelementbyclassname-与-queryselectorall-的区别" class="header-anchor">#</a> 6、在dom中使用 getElementByClassName 与 querySelectorAll 的区别</h2> <blockquote><p>以下代码为什么运行之后，点击按钮为什么会进入死循环？</p></blockquote> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list-item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list-item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list-item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list-item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">&gt;</span></span>复制一份<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code> <span class="token keyword">var</span> list <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'list'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token keyword">var</span> listItems <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'list-item'</span><span class="token punctuation">)</span>
+  <span class="token comment">// var listItems = document.querySelectorAll('.list-item')</span>
+  <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+  btn<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> listItems<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'🚀👻👻👻 ~ file: js-js00.md:181 ~ listItems:'</span><span class="token punctuation">,</span> listItems<span class="token punctuation">)</span>
+      <span class="token keyword">var</span> cloned <span class="token operator">=</span> listItems<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+      list<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>cloned<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 点击按钮后，可以发现页面上并没出现新增复制的 list-item 元素，并且页面已失去响应</span>
+  <span class="token comment">// 原因：页面已卡死，无响应，因为死循环了，这是因为 getElementsByClassName 方式获取到的元素集合 是一个动态集合，只要页面上元素发生改变，这个集合就会改变，打开控制台，可以看到输出的 listItems 的元素数量在不断增加</span>
+  <span class="token comment">// 解决方法： 使用 querySelectorAll 即可解决上述死循环问题，querySelectorAll 获取到的元素集合是一个静态集合，获取到的是调用时获取到的元素集合快照</span>
+
+</code></pre></div><h2 id="_7、异步观察目标元素与其祖先元素交叉-重叠-状态的api-上提加载-滚动到底部加载更多"><a href="#_7、异步观察目标元素与其祖先元素交叉-重叠-状态的api-上提加载-滚动到底部加载更多" class="header-anchor">#</a> 7、异步观察目标元素与其祖先元素交叉（重叠）状态的API, 上提加载，滚动到底部加载更多</h2> <div class="language-html extra-class"><pre class="language-html"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.scroll-container</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span>1px solid #e5e5e5<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.scroll-content</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>300px<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.load-more</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>50px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span>skyblue<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>#fff<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span>50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scroll-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scroll-box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scroll-content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      12313213133132131321
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>load-more<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>正在加载更多<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">const</span> loading <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.load-more'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> originContent <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.scroll-content'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> contentBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.scroll-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.scroll-container'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> isLoading <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token keyword">function</span> <span class="token function">loadMore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  isLoading <span class="token operator">=</span> <span class="token boolean">true</span>
+  <span class="token keyword">const</span> cloneContent <span class="token operator">=</span> originContent<span class="token punctuation">.</span><span class="token function">cloneNode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+  contentBox<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>cloneContent<span class="token punctuation">,</span>loading<span class="token punctuation">)</span>
+  isLoading <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> ob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IntersectionObserver</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">entries</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> entry <span class="token operator">=</span> entries<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>entry<span class="token punctuation">.</span>isIntersecting <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isLoading<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">loadMore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">thresholds</span><span class="token operator">:</span><span class="token number">0.1</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">root</span><span class="token operator">:</span>container
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onload</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">loadMore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  ob<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span>loading<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+
+</code></pre></div><p>滚动大底部将会不断的复制内容插入，以达到模拟滚动到底部加载更多的效果</p> <div class="scroll-container"><div class="scroll-box"><div class="scroll-content">
+      12313213133132131321
+    </div> <div class="load-more">正在加载更多</div></div></div> <script>
+const loading = document.querySelector('.load-more')
+const originContent = document.querySelector('.scroll-content')
+const contentBox = document.querySelector('.scroll-box');
+const container = document.querySelector('.scroll-container');
+let isLoading = false
+function loadMore(){
+  isLoading = true
+  const cloneContent = originContent.cloneNode(true)
+  contentBox.insertBefore(cloneContent,loading)
+  isLoading = false
+}
+const ob = new IntersectionObserver(function(entries){
+  const entry = entries[0]
+  if(entry.isIntersecting &amp;&amp; !isLoading){
+    loadMore()
+  }
+},{
+  thresholds:0.1,
+  root:container
+})
+window.onload=function(){
+  loadMore()
+  ob.observe(loading)
+}
+</script> <!----></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">3/25/2023, 9:32:12 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/frontend/js-js01.html">
+        语音合成
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f8839a88.js" defer></script><script src="/assets/js/2.8d06e467.js" defer></script><script src="/assets/js/21.858bfdd0.js" defer></script>
+  </body>
+</html>
